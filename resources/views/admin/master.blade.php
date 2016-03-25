@@ -25,6 +25,18 @@
 
     <!-- DataTables Responsive CSS -->
     <link href="{{ url('admin/bower_components/datatables-responsive/css/dataTables.responsive.css') }}" rel="stylesheet">
+
+    <!-- CKEditor && CKFinder -->
+    <script src="{{ url('admin/js/ckeditor/ckeditor.js') }}"></script>
+
+    <script src="{{ url('admin/js/ckfinder/ckfinder.js') }}"></script>
+
+    <script type="text/javascript">
+        var baseURL = "{!! url('/') !!}";
+    </script>
+
+    <script src="{{ url('admin/js/func_ckfinder.js') }}"></script>
+    <!-- END CKEditor && CKFinder -->
 </head>
 
 <body>
