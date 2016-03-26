@@ -70,5 +70,9 @@ class CateController extends Controller
     	return redirect()->route('admin.cate.getList')->with(['flash_level'=>'success','flash_message'=>'success !! Complete Edit Category']);
     }
 
+    public function demoCate () {
+        echo 'welcome laravel project';
+    }
+
 
 }
