@@ -7,7 +7,7 @@
     <form action="{!! route('admin.cate.getAdd') !!}" method="POST">
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <div class="form-group">
-            <label>Category Parent</label>
+            <label>Category</label>
             <select class="form-control" name="sltParent">
                 <option value="0">Please Choose Category</option>
                 <?php cate_parent($parent); ?>
