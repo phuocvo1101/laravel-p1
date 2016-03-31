@@ -18,7 +18,10 @@ class CreateProductsTable extends Migration
             $table->string('alias');
             $table->integer('price');
             $table->text('intro');
-            $table->longText('content');
+            $table->longText('content1');
+            $table->longText('content2');
+            $table->longText('content3');
+            $table->longText('content4');
             $table->string('image');
             $table->string('keywords');
             $table->string('description');

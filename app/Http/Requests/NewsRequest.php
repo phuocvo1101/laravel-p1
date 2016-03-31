@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class ProductRequest extends Request
+class NewsRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,9 +23,9 @@ class ProductRequest extends Request
      */
     public function rules()
     {
-        return [
+         return [
             'sltParent' => 'required',
-            'txtName'   => 'required|unique:products,name',
+            'txtName'   => 'required',
             'fImages'   => 'required|image'
         ];
     }
@@ -33,7 +33,6 @@ class ProductRequest extends Request
         return [
             'sltParent.required'    => 'Please choose Category',
             'txtName.required'      => 'Please Enter Name Product',
-            'txtName.unique'      => 'Product Name is Exit',
             'fImages.required'      => 'Please choose Images',
             'fImages.image'         => 'This File is Not Image'
         ];
