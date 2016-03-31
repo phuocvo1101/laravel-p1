@@ -52,7 +52,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin Area - Phuoc Vo</a>
+                <a class="navbar-brand" href="#">Admin Area - Phuoc Vo</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -92,7 +92,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="{{ URL::route('admin.cate.getList') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span class="fa arrow"></span></a>
@@ -126,6 +126,18 @@
                                 </li>
                                 <li>
                                     <a href="{{ URL::route('admin.user.getAdd') }}">Add User</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                         <li>
+                            <a href="#"><i class="fa fa-cube fa-fw"></i> Bài Viết<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ URL::route('admin.news.getList') }}">List Bài Viết</a>
+                                </li>
+                                <li>
+                                    <a href="{{ URL::route('admin.news.getAdd') }}">Add Bài Viết</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

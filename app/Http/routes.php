@@ -64,6 +64,14 @@ Route::group(['middleware' => ['web']], function () {
 			Route::get('edit/{id}',['as'=>'admin.user.getEdit','uses'=>'UserController@getEdit']);
 			Route::post('edit/{id}',['as'=>'admin.user.postEdit','uses'=>'UserController@postEdit']);
 		});
+		Route::group(['prefix'=>'news'], function () {
+			Route::get('list',['as'=>'admin.news.getList','uses'=>'NewsController@getList']);
+			Route::get('add',['as'=>'admin.news.getAdd','uses'=>'NewsController@getAdd']);
+			Route::post('add',['as'=>'admin.news.postAdd','uses'=>'NewsController@postAdd']);
+			Route::get('delete/{id}',['as'=>'admin.news.getDelete','uses'=>'NewsController@getDelete']);
+			Route::get('edit/{id}',['as'=>'admin.news.getEdit','uses'=>'NewsController@getEdit']);
+			Route::post('edit/{id}',['as'=>'admin.news.postEdit','uses'=>'NewsController@postEdit']);
+		});
 	});
 });
 Route::group(['middleware' => 'web'], function () {
