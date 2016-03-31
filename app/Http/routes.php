@@ -32,13 +32,13 @@ Route::group(['middleware' => ['web']], function () {
 Route::get('call-master', function (){
 	return view('views.sub');
 });
-Route::get('hoclaravel',function () {
-	return view('admin.cate.add');
-});
-
+// Route::get('hoclaravel',function () {
+// 	return route('/login');
+// 	//return view('admin.cate.add');
+// });
 
 Route::group(['middleware' => ['web']], function () {
-    Route::group(['prefix'=>'admin'],function () {
+    Route::group(['prefix'=>'admin','middleware'=>'auth'],function () {
 		Route::group(['prefix'=>'cate'], function () {
 			Route::get('list',['as'=>'admin.cate.getList','uses'=>'CateController@getList']);
 			Route::get('add',['as'=>'admin.cate.getAdd','uses'=>'CateController@getAdd']);
@@ -56,5 +56,19 @@ Route::group(['middleware' => ['web']], function () {
 			Route::post('edit/{id}',['as'=>'admin.product.postEdit','uses'=>'ProductController@postEdit']);
 			Route::get('delimg/{id}',['as'=>'admin.product.getDelImg','uses'=>'ProductController@getDelImg']);
 		});
+		Route::group(['prefix'=>'user'], function () {
+			Route::get('list',['as'=>'admin.user.getList','uses'=>'UserController@getList']);
+			Route::get('add',['as'=>'admin.user.getAdd','uses'=>'UserController@getAdd']);
+			Route::post('add',['as'=>'admin.user.postAdd','uses'=>'UserController@postAdd']);
+			Route::get('delete/{id}',['as'=>'admin.user.getDelete','uses'=>'UserController@getDelete']);
+			Route::get('edit/{id}',['as'=>'admin.user.getEdit','uses'=>'UserController@getEdit']);
+			Route::post('edit/{id}',['as'=>'admin.user.postEdit','uses'=>'UserController@postEdit']);
+		});
 	});
 });
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home','HomeController@index');
+});
+

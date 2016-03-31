@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Input;
 // include File
 use File;
 use App\Http\Requests\ProductRequest;
+use Auth;
 
 
 class ProductController extends Controller
@@ -37,11 +38,14 @@ class ProductController extends Controller
     	$product->alias = $product_request->txtPrice;
     	$product->price = $product_request->txtPrice;
     	$product->intro = $product_request->txtIntro;
-    	$product->content = $product_request->txtContent;
+    	$product->content1 = $product_request->txtContent1;
+        $product->content2 = $product_request->txtContent2;
+        $product->content3 = $product_request->txtContent3;
+        $product->content4 = $product_request->txtContent4;
     	$product->image = $file_name;
     	$product->keywords = $product_request->txtKeywords;
     	$product->description = $product_request->txtDescription;
-    	$product->user_id = 1;
+    	$product->user_id = Auth::user()->id;
     	$product->cate_id = $product_request->sltParent;
     	$product->new_product = $product_request->newPro == 'on' ? 1 : 0;
     	$product->old_product = $product_request->oldPro == 'on' ? 1 : 0;
@@ -97,10 +101,13 @@ class ProductController extends Controller
     	$product->alias = changeTitle(Request::Input('txtName')) ;
     	$product->price = Request::Input('txtPrice');
     	$product->intro = Request::Input('txtIntro');
-    	$product->content = Request::Input('txtContent');
+    	$product->content1 = Request::Input('txtContent1');
+        $product->content2 = Request::Input('txtContent2');
+        $product->content3 = Request::Input('txtContent3');
+        $product->content4 = Request::Input('txtContent4');
     	$product->keywords = Request::Input('txtKeywords');
     	$product->description = Request::Input('txtDescription');
-    	$product->user_id = 1;
+    	$product->user_id = Auth::user()->id;
     	$product->cate_id = Request::Input('sltParent');
     	$product->new_product = Request::Input('newPro') == 'on' ? 1 : 0;
     	$product->old_product = Request::Input('oldPro') == 'on' ? 1 : 0;

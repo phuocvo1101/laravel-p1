@@ -10,6 +10,7 @@
             <th>Name</th>
             <th>Price</th>
             <th>Date</th>
+            <th>Category</th>
             <th>Delete</th>
             <th>Edit</th>
         </tr>
