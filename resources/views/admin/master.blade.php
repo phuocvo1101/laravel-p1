@@ -126,8 +126,6 @@
                                 </li>
                                 <li>
                                     <a href="{{ URL::route('admin.user.getAdd') }}">Add User</a>
-<<<<<<< HEAD
-=======
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -140,7 +138,6 @@
                                 </li>
                                 <li>
                                     <a href="{{ URL::route('admin.news.getAdd') }}">Add Bài Viết</a>
->>>>>>> dev-ph-laravel
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
