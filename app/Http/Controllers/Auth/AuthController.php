@@ -7,6 +7,8 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use App\Http\Requests\LoginRequest;
+use Auth;
 
 class AuthController extends Controller
 {
@@ -30,6 +32,8 @@ class AuthController extends Controller
      */
     protected $redirectTo = '/';
 
+    protected $redirectAfterLogout = '/login';
+
     /**
      * Create a new authentication controller instance.
      *
@@ -39,6 +43,25 @@ class AuthController extends Controller
     {
         $this->middleware('guest', ['except' => 'logout']);
     }
+    public function showLoginForm()
+    {
+        return view('admin.login');
+    }
+
+    public function login(LoginRequest $request)
+    {
+        $login = array(
+            'username' => $request->username,
+            'password'  => $request->password,
+            'level'     => 1
+        );
+        if (Auth::attempt($login)) {
+            return redirect()->route('admin.cate.getList');
+        }else {
+            return redirect()->back();
+        }
+    }
+
 
     /**
      * Get a validator for an incoming registration request.
