@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/',['as'=>'home','uses'=>'HomeController@index']);
+Route::get('chi-tiet-san-pham/{id}',['as'=>'detailProduct','uses'=>'HomeController@detailProduct']);
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -77,6 +78,6 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/home','HomeController@index');
+  //  Route::get('/home','HomeController@index');
 });
 
