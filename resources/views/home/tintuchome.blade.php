@@ -6,9 +6,9 @@
                     @foreach ($news as $item)
                     <div class="news-content clearfix">
                         <div class="news-images">
-                            <a href="/tintuc"><img src="{{ asset('upload/'.$item->image) }}" alt="Toyota C300 AMG 2016 tại Việt Nam. Giá xe khởi điểm 1.799 tỷ đồng đã bao gồm V.A.T"></a>
+                            <a href="{!! URL::route('chitiettintuc', $item->id) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="{!!  $item->name !!}"></a>
                         </div>
-                        <h5><a href="/tintuc" title="{!!  $item->name !!}">{!!  $item->name !!}</a></h5>
+                        <h5><a href="{!! URL::route('chitiettintuc', $item->id) !!}" title="{!!  $item->name !!}">{!!  $item->name !!}</a></h5>
                         <div class="clearfix"></div>
                     </div>
                     @endforeach

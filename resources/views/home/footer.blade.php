@@ -22,9 +22,9 @@
                     <div class="clearfix"></div>
                     <div class="social">
                         <div class="col-dls-4">
-                            <a href="https://www.facebook.com/?ref=tn_tnmn" rel="nofollow" target="_blank"><img src="./home/images/icon-face.png" alt="facebook"></a>
-                            <a href="https://plus.google.com/u/0/" rel="nofollow" target="_blank"><img src="./home/images/icon-google.png" alt="google"></a>
-                            <a href="https://www.youtube.com/channel/UCRqBoAeTVSXPiXd2zMYY-zQ" rel="nofollow" target="_blank"><img src="./home/images/icon-youtube.png" alt="youtube"></a>
+                            <a href="https://www.facebook.com/?ref=tn_tnmn" rel="nofollow" target="_blank"><img src="{{ asset('home/images/icon-face.png') }}" alt="facebook"></a>
+                            <a href="https://plus.google.com/u/0/" rel="nofollow" target="_blank"><img src="{{ asset('home/images/icon-google.png') }}" alt="google"></a>
+                            <a href="https://www.youtube.com/channel/UCRqBoAeTVSXPiXd2zMYY-zQ" rel="nofollow" target="_blank"><img src="{{ asset('home/images/icon-youtube.png') }}" alt="youtube"></a>
                         </div>
                         <div class="col-dls-8">
                             @ 2016 Bảng quyền thuộc sở hữu Toyotavietnamstar.vn
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="col-dls-5 footer-images">
-                    <img src="./home/images/flace3.png" alt="avatar">
+                    <img src="{{ asset('home/images/flace3.png') }}" alt="avatar">
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                         <h5>Toyota Tân Cảng<br>Nhà phân phối Toyota lớn nhất Việt Nam</h5>
                     </div>
                     <div class="col-dl-7 footer-avatar">
-                        <img src="./home/images/avatar.png" alt="avatar">
+                        <img src="{{ asset('home/images/avatar.png') }}" alt="avatar">
                         <h2 class="col-dl-6 supporth"><span>Trưởng nhóm bán hàng</span><br>{{$infors['name']}}</h2>
                         <div class="col-dl-4 hotline">
                             <h2>{{$infors['mobile']}}</h2> Hỗ trợ 24/7

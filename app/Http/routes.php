@@ -16,6 +16,13 @@
 // });
 Route::get('/',['as'=>'home','uses'=>'HomeController@index']);
 Route::get('chi-tiet-san-pham/{id}',['as'=>'detailProduct','uses'=>'HomeController@detailProduct']);
+Route::get('loai-san-pham/{id}',['as'=>'loaisanpham','uses'=>'HomeController@loaisanpham']);
+Route::get('san-pham-moi',['as'=>'sanphammoi','uses'=>'HomeController@newProduct']);
+Route::get('san-pham-da-qua-su-dung',['as'=>'sanphamcu','uses'=>'HomeController@oldProduct']);
+Route::get('tin-tuc',['as'=>'tintuc','uses'=>'HomeController@tintuc']);
+Route::get('khuyen-mai',['as'=>'khuyenmai','uses'=>'HomeController@khuyenmai']);
+Route::get('chi-tiet-tin-tuc/{id}',['as'=>'chitiettintuc','uses'=>'HomeController@chitiettintuc']);
+Route::get('gioi-thieu',['as'=>'gioithieu','uses'=>'HomeController@gioithieu']);
 /*
 |--------------------------------------------------------------------------
 | Application Routes

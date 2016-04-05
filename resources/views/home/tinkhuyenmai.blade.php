@@ -7,9 +7,9 @@
                         @foreach ($tinkm as $item)
                         <div class="news-content clearfix">
                             <div class="news-images">
-                                <a href="/tintuc"><img src="{{ asset('upload/'.$item->image) }}" alt="Giá xe Toyota GLC tốt nhất, nhận đặt hàng ngay hôm nay | Hotline: 0909222022"></a>
+                                <a href="{!! URL::route('chitiettintuc', $item->id) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="{!!  $item->name !!}"></a>
                             </div>
-                            <h5><a href="/tintuc" title="{!!  $item->name !!}">{!!  $item->name !!}</a></h5>
+                            <h5><a href="{!! URL::route('chitiettintuc', $item->id) !!}" title="{!!  $item->name !!}">{!!  $item->name !!}</a></h5>
                             <div class="clearfix"></div>
                         </div>
                          @endforeach
