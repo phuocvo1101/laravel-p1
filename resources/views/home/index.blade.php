@@ -36,7 +36,7 @@
                                         <a href="{!! URL::route('detailProduct', $item->id) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="E200 Edition E"></a>
                                     </div>
                                     <h4><a href="{!! URL::route('detailProduct', $item->id) !!}">{!! $item->name !!}</a></h4>
-                                    <div class="product_price"><span class="spleft"></span><span class="spcenter">{!! number_format($item->price,0,',','.') !!} VND</span><span class="spleft spright"></span></div>
+                                    <div class="product_price"><span class="spleft"></span><span class="spcenter">{!! number_format($item->price,0,',','.') !!} VNĐ</span><span class="spleft spright"></span></div>
                                 </div>
                             </div>
                             @endforeach
@@ -88,8 +88,4 @@
                     </div>
                 </div>
                 <!-- End right content -->
-@endsection
-
-@section('content')
-    <p>This is my body content.</p>
 @endsection

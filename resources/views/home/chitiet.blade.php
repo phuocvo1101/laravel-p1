@@ -63,33 +63,23 @@
                     <!-- Other product -->
                     <div class="product_other">
                         <h3 class="title-other"><span>Sản phẩm khác</span></h3>
-                        <div class="product">
-                            <div class="products">
-                                <div class="product_img">
-                                    <a href="/chitiet"><img src="./images/flace.png" alt="E200"></a>
+                        @if($relatedProducts)
+                            @foreach($relatedProducts as $item)
+                            <div class="product">
+
+                                <div class="products">
+
+                                    <div class="product_img">
+                                        <a href="{!! URL::route('detailProduct', $item->id) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="E200"></a>
+                                    </div>
+                                    <h4><a href="{!! URL::route('detailProduct', $item->id) !!}">{{ $item->name }}</a></h4>
+                                    <div class="product_price"><span class="spleft"></span><span class="spcenter">{!! number_format($item->price,0,',','.') !!} VNĐ</span><span class="spleft spright"></span></div>
+
                                 </div>
-                                <h4><a href="/chitiet">E200</a></h4>
-                                <div class="product_price"><span class="spleft"></span><span class="spcenter">Giá: 1.999.000.000 VNĐ</span><span class="spleft spright"></span></div>
+
                             </div>
-                        </div>
-                        <div class="product">
-                            <div class="products">
-                                <div class="product_img">
-                                    <a href="/chitiet"><img src="./images/flace.png" alt="E250 AMG"></a>
-                                </div>
-                                <h4><a href="/chitiet">E250 AMG</a></h4>
-                                <div class="product_price"><span class="spleft"></span><span class="spcenter">Giá: 2.329.000.000 VNĐ</span><span class="spleft spright"></span></div>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="products">
-                                <div class="product_img">
-                                    <a href="/chitiet"><img src="./images/flace.png" alt="E400 "></a>
-                                </div>
-                                <h4><a href="/chitiet">E400 </a></h4>
-                                <div class="product_price"><span class="spleft"></span><span class="spcenter">Giá: 2.879.000.000 VNĐ</span><span class="spleft spright"></span></div>
-                            </div>
-                        </div>
+                            @endforeach
+                        @endif
                         <div class="clearfix"></div>
                         <h3 class="title-other"><span>Bình luận</span></h3>
                         <div class="fb-comments" data-href="http://laravel1.local" data-width="100%" data-numposts="5"></div>

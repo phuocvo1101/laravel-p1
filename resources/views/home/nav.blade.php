@@ -18,11 +18,11 @@
                 <div class="navmenuss">
                     <ul class="nav navbar-nav navbar-right nav-menus">
                         <li><a href="/">Trang chủ</a></li>
-                        <li><a href="/lienhe">Giới thiệu</a></li>
-                        <li><a href="/sanpham">Xe mới</a></li>
-                        <li><a href="/sanpham">Xe đã qua sử dụng</a></li>
-                        <li><a href="/lienhe">Khuyến mãi</a></li>
-                        <li><a href="/tintuc">Tin tức</a></li>
+                        <li><a href="{!! URL::route('gioithieu') !!}">Giới thiệu</a></li>
+                        <li><a href="{!! URL::route('sanphammoi') !!}">Xe mới</a></li>
+                        <li><a href="{!! URL::route('sanphamcu') !!}">Xe đã qua sử dụng</a></li>
+                        <li><a href="{!! URL::route('khuyenmai') !!}">Khuyến mãi</a></li>
+                        <li><a href="{!! URL::route('tintuc') !!}">Tin tức</a></li>
                         <li><a href="/lienhe">Liên hệ</a></li>
                     </ul>
                 </div>
