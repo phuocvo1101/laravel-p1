@@ -35,7 +35,7 @@
 	            @if ($news->lastPage() > 1)
 	            <div class="pagination" align="right">
 	            	@if($news->currentPage() != 1)
-	            		<a href="{!! $news->currentPage() -1 !!}">Prev</a>
+	            		<a href="{!! $news->url($news->currentPage() - 1) !!}">Prev</a>
 	            	@endif
 	            	@for ($i=1; $i <= $news->lastPage() ; $i++)
 	            		@if($news->currentPage() == $i)
@@ -45,7 +45,7 @@
 	            		@endif
 	                @endfor
 	                @if($news->currentPage() != $news->lastPage())
-	                	<a href="{!! $news->currentPage() +1 !!}">Next</a>
+	                	<a href="{!! $news->url($news->currentPage() +1) !!}">Next</a>
 	                @endif
 	            </div>
 	            @endif

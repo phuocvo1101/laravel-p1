@@ -37,7 +37,7 @@
 	            @if ( $cate_products->lastPage() > 1 )
 	            <div class="pagination" align="right">
 	            	@if($cate_products->currentPage() != 1)
-	            		<a href="{!! $cate_products->currentPage() -1 !!}">Prev</a>
+	            		<a href="{!! $cate_products->url($cate_products->currentPage() - 1) !!}">Prev</a>
 	            	@endif
 	            	@for ($i=1; $i <= $cate_products->lastPage() ; $i++)
 	            		@if($cate_products->currentPage() == $i)
@@ -47,7 +47,7 @@
 	            		@endif
 	                @endfor
 	                @if($cate_products->currentPage() != $cate_products->lastPage())
-	                	<a href="{!! $cate_products->currentPage() +1 !!}">Next</a>
+	                	<a href="{!! $cate_products->url($cate_products->currentPage() +1)  !!}">Next</a>
 	                @endif
 	            </div>
 	            @endif
