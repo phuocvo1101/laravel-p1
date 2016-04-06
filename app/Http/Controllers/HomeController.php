@@ -13,6 +13,7 @@ class HomeController extends Controller
      *
      * @return void
      */
+    protected $pag = 2;
     public function __construct()
     {
        // $this->middleware('auth');
@@ -27,8 +28,7 @@ class HomeController extends Controller
         $tinkm = DB::table('news')->select('id','name','image')->where('cate_news_id', 2)->orderBy('id', 'desc')->skip(0)->take(4)->get();
         View::share ( 'infors', $infors );
         View::share ( 'news', $news );
-        View::share ( 'tinkm', $tinkm );
-             
+        View::share ( 'tinkm', $tinkm );        
     }
 
     /**
@@ -57,35 +57,35 @@ class HomeController extends Controller
     {
         $cate = DB::table('cates')->select('id','name')->where('id', $id)->first();
         $loai = $cate->name;
-        $cate_products = DB::table('products')->select('id','name','price','image')->where('cate_id', $id)->orderBy('id', 'desc')->get();
+        $cate_products = DB::table('products')->select('id','name','price','image')->where('cate_id', $id)->orderBy('id', 'desc')->paginate($this->pag);
         return view('home.sanpham',compact('loai','cate_products'));
     }
 
     public function newProduct ()
     {
         $loai = 'xe mới';
-        $cate_products = DB::table('products')->select('id','name','price','image')->where('new_product', 1)->orderBy('id', 'desc')->get();
+        $cate_products = DB::table('products')->select('id','name','price','image')->where('new_product', 1)->orderBy('id', 'desc')->paginate($this->pag);
         return view('home.sanpham',compact('loai','cate_products'));
     }
 
     public function oldProduct ()
     {
         $loai = 'xe đã qua sử dụng';
-        $cate_products = DB::table('products')->select('id','name','price','image')->where('old_product', 1)->orderBy('id', 'desc')->get();
+        $cate_products = DB::table('products')->select('id','name','price','image')->where('old_product', 1)->orderBy('id', 'desc')->paginate($this->pag);
         return view('home.sanpham',compact('loai','cate_products'));
     }
 
     public function tintuc ()
     {
         $loai = 'Tin tức';
-        $news = DB::table('news')->select('id','name','alias','image')->where('cate_news_id', 1)->orderBy('id', 'desc')->get();
+        $news = DB::table('news')->select('id','name','alias','image')->where('cate_news_id', 1)->orderBy('id', 'desc')->paginate($this->pag);
         return view('home.tintuc',compact('loai','news'));
     }
 
     public function khuyenmai ()
     {
         $loai = 'Khuyến Mãi';
-        $news = DB::table('news')->select('id','name','alias','image')->where('cate_news_id', 2)->orderBy('id', 'desc')->get();
+        $news = DB::table('news')->select('id','name','alias','image')->where('cate_news_id', 2)->orderBy('id', 'desc')->paginate($this->pag);
         return view('home.tintuc',compact('loai','news'));
     }
 
