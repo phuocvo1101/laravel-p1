@@ -34,11 +34,23 @@
 	            	@endforeach
 	            @endif
 	            <div class="clearfix"></div>
+	            @if ( $cate_products->lastPage() > 1 )
 	            <div class="pagination" align="right">
-	                <span>1</span>
-	                <a href="/chitiet">&gt;</a>
-	                <a href="/chitiet">&gt;&gt;</a>
+	            	@if($cate_products->currentPage() != 1)
+	            		<a href="{!! $cate_products->currentPage() -1 !!}">Prev</a>
+	            	@endif
+	            	@for ($i=1; $i <= $cate_products->lastPage() ; $i++)
+	            		@if($cate_products->currentPage() == $i)
+	            		 <span>{!!$i!!}</span>
+	            		@else
+	            			<a href="{!! $cate_products->url($i) !!}">{!!$i!!}</a>
+	            		@endif
+	                @endfor
+	                @if($cate_products->currentPage() != $cate_products->lastPage())
+	                	<a href="{!! $cate_products->currentPage() +1 !!}">Next</a>
+	                @endif
 	            </div>
+	            @endif
 	            <!--pagination-->
 	        </div>
 	    </div>

@@ -32,14 +32,23 @@
 	            @endif
 	            <div class="clearfix"></div>
 	            <div class="clearfix"></div>
+	            @if ($news->lastPage() > 1)
 	            <div class="pagination" align="right">
-	                <span>1</span>
-	                <a href="#">2</a> 
-	                <a href="#">3</a> ... 
-	                <a href="#">8</a> 
-	                <a href="#">&gt;</a>
-	                <a href="#">&gt;&gt;</a>
+	            	@if($news->currentPage() != 1)
+	            		<a href="{!! $news->currentPage() -1 !!}">Prev</a>
+	            	@endif
+	            	@for ($i=1; $i <= $news->lastPage() ; $i++)
+	            		@if($news->currentPage() == $i)
+	            		 <span>{!!$i!!}</span>
+	            		@else
+	            			<a href="{!! $news->url($i) !!}">{!!$i!!}</a>
+	            		@endif
+	                @endfor
+	                @if($news->currentPage() != $news->lastPage())
+	                	<a href="{!! $news->currentPage() +1 !!}">Next</a>
+	                @endif
 	            </div>
+	            @endif
 	            <!--pagination-->
 	        </div>
 	    </div>
