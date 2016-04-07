@@ -23,7 +23,7 @@
                         <li><a href="{!! URL::route('sanphamcu') !!}">Xe đã qua sử dụng</a></li>
                         <li><a href="{!! URL::route('khuyenmai') !!}">Khuyến mãi</a></li>
                         <li><a href="{!! URL::route('tintuc') !!}">Tin tức</a></li>
-                        <li><a href="/lienhe">Liên hệ</a></li>
+                        <li><a href="{!! URL::route('getLienhe') !!}">Liên hệ</a></li>
                     </ul>
                 </div>
             </nav>

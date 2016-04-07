@@ -1,37 +1,7 @@
-@extends('layouts.master')
+@extends('home.master')
 
-@section('title', 'Tin tức')
+@section('title', 'Liên Hệ')
 
-@section('slider')
-    @parent
-    <!-- Slider  homeslide-->
-    <section class="slider">
-        <div class="container">
-            <div class="homeslide">
-                <div class="flexslider">
-                    <div class="flex-viewport" style="overflow: hidden; position: relative;">
-                        <ul class="slides" style="width: 1000%; transition-duration: 0s; transform: translate3d(-1170px, 0px, 0px);">
-                            <li class="clone" aria-hidden="true" style="width: 1170px; float: left; display: block;"><img src="./images/slider/slider1.jpg" alt="slide" draggable="false"></li>
-                            <li class="flex-active-slide.jpg" style="width: 1170px; float: left; display: block;"><img src="./images/slider/slider2.jpg" alt="slide" draggable="false"></li>
-                            <li style="width: 1170px; float: left; display: block;" class=""><img src="./images/slider/slider3.jpg" alt="slide" draggable="false"></li>
-                            <li style="width: 1170px; float: left; display: block;" class=""><img src="./images/slider/slider4.jpg" alt="slide" draggable="false"></li>                            
-                        </ul>
-                    </div>
-                    <ol class="flex-control-nav flex-control-paging">
-                        <li><a class="flex-active">1</a></li>
-                        <li><a class="">2</a></li>
-                        <li><a class="">3</a></li>
-                    </ol>
-                    <ul class="flex-direction-nav">
-                        <li><a class="flex-prev" href="#">Previous</a></li>
-                        <li><a class="flex-next" href="#">Next</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Slider homeslide-->
-@endsection
 
 <!-- Informaster -->
 @section('infomaster')
@@ -48,12 +18,13 @@
     <!-- Right content -->
 	<div class="col-dl-9 right-content">
 	    <div class="wrapper">
-	        <h3 class="titlel row-title"><span>Liên hệ<img src="./images/icon-3.png" alt="danh muc"></span></h3>
+	        <h3 class="titlel row-title"><span>Liên hệ<img src="{{ asset('home/images/icon-3.png') }}" alt="danh muc"></span></h3>
 	        <div class="clearfix"></div>
 	        <div class="content">
 	            <div class="col-dl-7">
 	                <div class="contact">
-	                    <form action="" method="post" name="frmContact" id="frmContact">
+	                    <form action="{!! url('lien-he') !!}" method="post" name="frmContact" id="frmContact">
+	                    	<input type="hidden"  name="_token" value="{!! csrf_token() !!}">
 	                        <label class="lblContact">(
 	                            <font color="#FF0000" style="font-weight:normal;">*</font> ) là thông tin bắt buộc.</label>
 	                        <div class="clear"></div>
@@ -86,7 +57,7 @@
 	                </div>
 	            </div>
 	            <div class="col-dl-5 contactr">
-	                <p align="center"><img src="./images/contact.jpg" align="bottom" alt="dang ky"></p>
+	                <p align="center"><img src="{{ asset('home/images/contact.jpg') }}" align="bottom" alt="dang ky"></p>
 	                <br>
 	                <div class="infofooter">
 	                    <h1><span style="color:#0258aa;">Vietnam Star Automobile</span></h1>
@@ -98,7 +69,7 @@
 	                    <p>Địa chỉ: 02 Trường Chinh, P.Tây Thạnh, Q. Tân Phú, TpHCM
 	                        <br> Điện thoại: 08.3.815.8888 , xưởng dịch vụ: 08.3815.7030
 	                        <br> Email: nguyen-van.quy@vietnamstar-auto.com
-	                        <br> Website bán hàng: <a href="http://mercedesvietnamstar.vn/">http://mercedesvietnamstar.vn</a>
+	                        <br> Website bán hàng: <a href="{!! url('/')!!}">{!! url('/')!!}</a>
 	                        <br><span style="font-size:8px;">LK: <a href="http://www.xemercedes.com.vn/">Mercedes Vietnam</a>,&nbsp;<a href="http://www.xemercedes.com.vn/mercedes-c-class/c200/">Mercedes C200</a> ,<a href="http://www.xemercedes.com.vn/mercedes-s-class/s400/">Mercedes S400</a> ,<a href="http://www.xemercedes.com.vn/mercedes-s-class/s500/">Mercedes S500</a> ,<a href="http://www.xemercedes.com.vn/mercedes-glc-class/">Mercedes GLC</a></span></p>
 	                </div>
 	            </div>
@@ -130,8 +101,4 @@
 	    </div>
 	</div>
     <!-- End right content -->
-@endsection
-
-@section('content')
-    <p>This is my body content.</p>
 @endsection

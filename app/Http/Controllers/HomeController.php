@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 use View;
 use App\Http\Requests;
-use Illuminate\Http\Request;
-use DB;
+//use Illuminate\Http\Request;
+use Request;
+use DB, Mail;
 
 class HomeController extends Controller
 {
@@ -106,6 +107,28 @@ class HomeController extends Controller
         $loai = 'Giới thiệu';
         $new = DB::table('news')->select('*')->where('cate_news_id', 3)->first();
         return view('home.gioithieu',compact('loai','new'));
+    }
+    public function getLienhe () 
+    {
+        return view('home.lienhe');
+    }
+    public function postLienhe (Request $request)
+    {
+        $data = [
+                    'hoten'=>Request::input('txtName'),
+                    'email'=>Request::input('txtEmail'),
+                    'phone'=>Request::input('txtPhone'),
+                    'noidung'=>Request::input('txtContent')
+                ];
+        Mail::send('emails.blanks',$data, function($m) {
+            $m->from(Request::input('txtEmail'), 'Phuoc Vo');
+            $m->to('phuoclaravel@gmail.com','Admin laravel')->subject('Tin nhắn Khách Hàng Mail xe Oto');
+
+        });
+        echo "<script>
+                alert('Cảm ơn bạn đã gửi tin. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất!');
+                window.location = '".url('/')."'
+            </script>";
     }
 
 }
