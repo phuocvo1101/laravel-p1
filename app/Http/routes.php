@@ -23,6 +23,10 @@ Route::get('tin-tuc',['as'=>'tintuc','uses'=>'HomeController@tintuc']);
 Route::get('khuyen-mai',['as'=>'khuyenmai','uses'=>'HomeController@khuyenmai']);
 Route::get('chi-tiet-tin-tuc/{id}',['as'=>'chitiettintuc','uses'=>'HomeController@chitiettintuc']);
 Route::get('gioi-thieu',['as'=>'gioithieu','uses'=>'HomeController@gioithieu']);
+Route::group(['middleware' => ['web']], function () {
+    Route::get('lien-he',['as'=>'getLienhe', 'uses'=>'HomeController@getLienhe']);
+    Route::post('lien-he',['as'=>'postLienhe', 'uses'=>'HomeController@postLienhe']);
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
