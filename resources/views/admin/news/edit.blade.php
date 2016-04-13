@@ -26,7 +26,7 @@
             <script type="text/javascript">ckeditor('txtIntro')</script>
         </div>
        <div class="form-group">
-            <label>Content 1: Đánh giá</label>
+            <label>Content: </label>
             <textarea class="form-control" rows="3" name="txtContent">{!! old('txtContent'), isset($news['content'])? $news['content']:null !!}</textarea>
             <script type="text/javascript">ckeditor("txtContent")</script>
         </div>

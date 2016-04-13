@@ -1,13 +1,18 @@
 @extends('home.master')
 
 @section('title', 'Chi tiết sản phẩm')
+
+@section('sidebar')
+
+    @include('home.sliderproduct')
+@endsection
 	@section('right-content')
 	<!-- Right content -->
         <div class="col-dl-9 right-content">
             <div class="wrapper">
                 <div class="link-other">
                     <div class="link-others">
-                        <span class="name-car">E200 Edition E</span><a rel="tabs1" href="javascript:void(0)">Đánh giá</a><a rel="tabs2" href="javascript:void(0)">Thông số kỹ thuật</a><a rel="tabs3" href="javascript:void(0)">Màu nội thất</a><a rel="tabs4" href="javascript:void(0)">Màu ngoại thất</a>
+                        <span class="name-car">{!! $product->name!!}</span><a rel="tabs1" href="javascript:void(0)">Đánh giá</a><a rel="tabs2" href="javascript:void(0)">Thông số kỹ thuật</a><a rel="tabs3" href="javascript:void(0)">Màu nội thất</a><a rel="tabs4" href="javascript:void(0)">Màu ngoại thất</a>
                     </div>
                 </div>
                 <script type="text/javascript">

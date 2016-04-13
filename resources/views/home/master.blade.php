@@ -32,7 +32,10 @@
     <!-- End header -->
 
     <!-- Start slider -->
-	@include('home.slider')
+    @section('sidebar')
+            @include('home.slider')
+    @show
+	
     <!-- End slider. -->
     <section>
         <div class="container toplink clearfix">

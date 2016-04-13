@@ -51,7 +51,9 @@ class HomeController extends Controller
     {
         $product = DB::table('products')->select('*')->where('id', $id)->first();
         $relatedProducts = DB::table('products')->select('id','name','price','image')->where('cate_id',$product->cate_id)->where('id','<>',$product->id)->orderBy('id', 'desc')->skip(0)->take(3)->get();
-        return view('home.chitiet',compact('product','relatedProducts'));
+        $img_detail = DB::table('product_images')->select('id','image')->where('product_id',$id)->orderBy('id', 'desc')->skip(0)->take(3)->get();
+       //echo '<pre>'; print_r($img_detail);die();
+        return view('home.chitiet',compact('product','relatedProducts','img_detail'));
     }
 
     public function loaisanpham($id) 
