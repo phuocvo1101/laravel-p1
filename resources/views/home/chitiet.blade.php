@@ -42,7 +42,7 @@
                         <h3 class="name_tab">Đánh giá</h3><img alt="" src="{{ asset('upload/'.$product->image) }}" style="height:288px;width:876px;">
                         <br>
                        {!! $product->content1!!}
-
+					</div>
                     <div class="detail_news detail_tab" id="tabs2">
                         <h3 class="name_tab">Thông số kỹ thuật</h3>
                         {!! $product->content2!!}
@@ -82,7 +82,7 @@
                         @endif
                         <div class="clearfix"></div>
                         <h3 class="title-other"><span>Bình luận</span></h3>
-                        <div class="fb-comments" data-href="http://laravel1.local" data-width="100%" data-numposts="5"></div>
+                        <div class="fb-comments" data-href="{{ url('/') }}" data-width="100%" data-numposts="5"></div>
                     </div>
                     <!-- End other product -->
 
@@ -99,6 +99,23 @@
 				  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5&appId=806635242786866";
 				  fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));</script>
+
+                <!-- Fix table on chi tiet -->
+                <script type="text/javascript">
+                    $(document).ready(function() {
+
+                        $('div.detail_news > table').addClass('table-striped table-bordered');
+                        $('div.detail_news > table').css('width', '100%');
+                        $('div.detail_news > table > tbody > tr > td').removeAttr( 'style' );
+
+                        // img-responsive for content
+                        $('div.content').find("img").addClass('img-responsive');
+                        $('div.content').find("img").removeAttr( 'style' );
+
+                    });
+
+                </script>
+                <!-- End fix table -->
             </div>
         </div>
         <!-- End right content -->

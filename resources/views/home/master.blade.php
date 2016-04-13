@@ -36,13 +36,13 @@
     <!-- End slider. -->
     <section>
         <div class="container toplink clearfix">
-            <ul>
+            <!-- <ul>
                 <li><a href="#">Đăng ký lái thử</a></li>
                 <li><a href="#">Mua xe trả góp</a></li>
                 <li><a href="#">Tài chính &amp; Bảo hiểm</a></li>
                 <li><a href="#">Bảng giá xe</a></li>
                 <li><a href="#">Chứng nhận xe cũ chính hãng</a></li>
-            </ul>            
+            </ul>    -->         
             @yield('infomaster')
         </div>
     </section>
