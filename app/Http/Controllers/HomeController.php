@@ -14,7 +14,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    protected $pag = 18;
+    protected $pag = 12;
     public function __construct()
     {
        // $this->middleware('auth');
