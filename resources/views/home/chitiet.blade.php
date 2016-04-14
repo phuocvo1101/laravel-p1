@@ -44,7 +44,7 @@
                     <div class="clearfix"></div>
                     <!-- Tabs -->
                     <div class="detail_news" id="tabs1">
-                        <h3 class="name_tab">Đánh giá</h3><img alt="" src="{{ asset('upload/chitiet.png') }}" style="height:288px;width:876px;">
+                        <h3 class="name_tab">Đánh giá</h3><img alt="" src="{{ asset('upload/detail/chitiet.png') }}" style="height:288px;width:876px;">
                         <br>
                        {!! $product->content1!!}
 					</div>
