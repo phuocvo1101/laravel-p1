@@ -7,9 +7,9 @@
 @section('infomaster')
     <div class="infomaster">
         <div class="hotline">
-            <h2>0909 222 022</h2> Hỗ trợ 24/7
+            <h2>{{$infors['mobile']}}</h2> Hỗ trợ 24/7
         </div>
-        <h2 class="supporth"><span>Trưởng nhóm bán hàng</span><br>Nguyễn Văn Quý</h2>
+        <h2 class="supporth"><span>Trưởng nhóm bán hàng</span><br>{{$infors['name']}}</h2>
     </div>
 @endsection
 <!-- End informaster -->
