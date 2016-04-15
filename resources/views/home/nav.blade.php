@@ -9,7 +9,7 @@
                 </button>
                 <a href="/" class="navbar-brand"><img src="{{ asset('home/images/logo.png') }}" alt="logo"></a>
             </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse navmenus">
+            <nav class="navbar-collapse bs-navbar-collapse navmenus collapse" aria-expanded="false" style="height: 1px;">
                 <div class="hotline">
                     <h2>{{$infors['mobile']}}</h2> Hỗ trợ 24/7
                 </div>

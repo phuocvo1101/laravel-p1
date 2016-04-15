@@ -16,6 +16,7 @@
 	<!-- global js -->
     {!! Html::script('/home/js/jquery.min.js') !!}
     {!! Html::script('/home/js/jquery.flexslider.js') !!}
+    {!! Html::script('/home/js/bootstrap.min.js') !!}
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -89,5 +90,20 @@
     <!-- Infor footer -->
         @include('home.footer')
     <!-- End footer -->
+    <!-- Go top -->
+    <div id="goTop" style="display: block;"><img src="{{ asset('home/images/icon-back.png') }}" alt="Len dau trang"></div>
+    <script type="text/javascript">
+        $(function(){
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) $('#goTop').fadeIn();
+                    else $('#goTop').fadeOut();
+                });
+                $('#goTop').click(function () {
+                $('body,html').animate({ scrollTop: 0 }, 'slow');
+            });
+
+        });
+    </script>
+    <!-- End go top -->
 </body>
 </html>
