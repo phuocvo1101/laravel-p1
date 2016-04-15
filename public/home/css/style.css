@@ -301,7 +301,7 @@ body{padding-bottom:55px;}.footerfixed{position:fixed;bottom:0;left:0;width:100%
 }
 .camry-cntwrap.pg-360 .btn-color a {
     display: inline-block;
-    text-align: center;
+    /*text-align: center;*/
     font-size: 14px;
     color: #5d5c5c;
     margin: 0 3px 10px;
