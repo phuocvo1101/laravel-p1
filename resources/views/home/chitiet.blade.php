@@ -144,8 +144,8 @@
                     }
 
                     // Create Product 360 from img:
-                    if ($tabs3.find('img[src$="_btn.png"]').length > 0) {
-                        $tabs3 = $('div#tabs3');
+                    $tabs3 = $('div#tabs3');
+                    if ($tabs3.find('img[src$="_btn.png"]').length > 0) {                        
                         $product_car = '';
                         $btn_car = '';
                         $a = '<h3 class="name_tab">Màu nội thất</h3><div id="wrap_360"><div class="camry-cntwrap pg-360"><div class="content-360 wrap_product_car" id="content_360">';
