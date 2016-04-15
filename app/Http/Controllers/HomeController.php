@@ -21,9 +21,9 @@ class HomeController extends Controller
         $infors = array(
                         'name' => "Mr. Hiếu" ,
                         'mobile' => "093456.4161",
-                        'cty' => "Toyota Tân Cảng",
+                        'cty' => "TOYOTA HIROSHIMA TÂN CẢNG - HT",
                         'email' => "toyotahcm.tancang@gmail.com",
-                        'addr' =>  "220Bis Ðiện Biên Phủ, P.22, Q. Bình Thạnh, Tp. HCM"                   
+                        'addr' =>  "220 Bis Điện Biên Phủ (Nguyễn Hữu Cảnh nối dài), P.22, Q.Bình Thạnh, TPHCM"                   
                         );
         $news = DB::table('news')->select('id','name','image')->where('cate_news_id', 1)->orderBy('id', 'desc')->skip(0)->take(4)->get();
         $tinkm = DB::table('news')->select('id','name','image')->where('cate_news_id', 2)->orderBy('id', 'desc')->skip(0)->take(4)->get();

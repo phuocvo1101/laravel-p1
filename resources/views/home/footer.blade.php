@@ -3,14 +3,14 @@
             <div class="row-data clearfix footer">
                 <div class="col-dls-7">
                     <div class="infofooter">
-                        <h1><span style="color:#0258aa;">Toyota Tân Cảng</span></h1>
+                        <h1><span style="color:#0258aa;">{{$infors['cty']}}</span></h1>
                         <h3><span style="color:#0258aa;">Nhà phân phối Toyota lớn nhất Việt Nam</span></h3> &nbsp;
                         <p>Phân phối xe chính hãng, xe nhập khẩu chính hãng.
                             <br> Hệ thống bảo hành toàn quốc.
                             <br> Đổi xe cũ - sở hữu xe mới chính hãng giá ưu đãi.
                             <br> Dịch vụ hỗ trợ 24/7, Tư vấn lái thử miễn phí.</p>
                         <p>Địa chỉ: {{$infors['addr']}}
-                            <br> Điện thoại: 08.3.815.8888 , xưởng dịch vụ: 08.3815.7030
+                            <br> Tel: 0934564161 - 0933631212. Fax: (84.8) 35126969
                             <br> Email: {{$infors['email']}}
                             <br> Website bán hàng: <a href="http://Toyotavietnamstar.vn/">http://Toyotavietnamstar.vn</a>
                             <br><span style="font-size:8px;">LK: <a href="http://www.xeToyota.com.vn/">Toyota Vietnam</a>,&nbsp;<a href="http://www.xeToyota.com.vn/Toyota-c-class/c200/">Toyota C200</a> ,<a href="http://www.xeToyota.com.vn/Toyota-s-class/s400/">Toyota S400</a> ,<a href="http://www.xeToyota.com.vn/Toyota-s-class/s500/">Toyota S500</a> ,<a href="http://www.xeToyota.com.vn/Toyota-glc-class/">Toyota GLC</a></span></p>
@@ -47,7 +47,7 @@
             <div class="footerfixeds container">
                 <div class="footerfixeds-sub">
                     <div class="col-dl-5 info_footer">
-                        <h5>Toyota Tân Cảng<br>Nhà phân phối Toyota lớn nhất Việt Nam</h5>
+                        <h5>{{$infors['cty']}}<br>Nhà phân phối Toyota lớn nhất Việt Nam</h5>
                     </div>
                     <div class="col-dl-7 footer-avatar">
                         <img src="{{ asset('home/images/avatar.png') }}" alt="avatar">
