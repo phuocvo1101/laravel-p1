@@ -250,3 +250,72 @@ body{padding-bottom:55px;}.footerfixed{position:fixed;bottom:0;left:0;width:100%
 .nav-menus > li:hover > ul{display:block;}
 .col-dls-1,.col-dls-2,.col-dls-3,.col-dls-4,.col-dls-5,.col-dls-6,.col-dls-7,.col-dls-8,.col-dls-9,.col-dls-10,.col-dls-11,.col-dls-12{float:left;}.col-dls-12{width:100%}.col-dls-11{width:91.66666667%}.col-dls-10{width:83.33333333%}.col-dls-9{width:75%}.col-dls-8{width:66.66666667%}.col-dls-7{width:58.33333333%}.col-dls-6{width:50%}.col-dls-5{width:41.66666667%}.col-dls-4{width:33.33333333%}.col-dls-3{width:25%}.col-dls-2{width:16.66666667%}.col-dls-1{width:8.33333333%}
 }
+/*Color product 360*/
+.product-car-360 {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+.camry-cntwrap.pg-360 .button-360 .btn-control {
+    width: 215px;
+    padding-left: 150px;
+}
+.camry-cntwrap.pg-360 .button-360 .line {
+    width: 1px;
+    height: 78px;
+    /*background: url(../images/images-corolla-altis/line-360.png) no-repeat;*/
+    margin: 20px 33px 0 0;
+}
+.camry-cntwrap.pg-360 .button-360 .btn-next-360, .camry-cntwrap.pg-360 .button-360 .btn-prev-360 {
+    display: inline-block;
+    width: 21px;
+    height: 24px;
+    /*background: url(../images/images-corolla-altis/btn/btn-prev.png) no-repeat;*/
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+.camry-cntwrap.pg-360 .button-360 .btn-next-360 {
+    /*background: url(../images/images-corolla-altis/btn/btn-next.png) no-repeat;*/
+}
+.camry-cntwrap.pg-360 .button-360 .btn-next-360:hover, .camry-cntwrap.pg-360 .button-360 .btn-prev-360:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.camry-cntwrap.pg-360 .button-360 .btn-control span.text {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: 7px;
+    font-size: 18px;
+}
+.camry-cntwrap.pg-360 .btn-color {
+    margin-top: 20px;
+    text-align: -webkit-center;
+}
+.camry-cntwrap.pg-360 .btn-color .text {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: 34px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+.camry-cntwrap.pg-360 .btn-color a {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    color: #5d5c5c;
+    margin: 0 3px 10px;
+    line-height: 18px;
+    width: 130px;
+    vertical-align: top;
+}
+.camry-cntwrap.pg-360 .btn-color a.active, .camry-cntwrap.pg-360 .btn-color a:hover {
+    color: #da1a21;
+}
+/*===================================*/
+.wrap_product_car .product_360 {
+    display: none;
+}
+.wrap_product_car .product_360.active {
+    display: block;
+} 
