@@ -60,17 +60,17 @@
 	                <p align="center"><img src="{{ asset('home/images/contact.jpg') }}" align="bottom" alt="dang ky"></p>
 	                <br>
 	                <div class="infofooter">
-	                    <h1><span style="color:#0258aa;">Vietnam Star Automobile</span></h1>
-	                    <h3><span style="color:#0258aa;">Nhà phân phối Mercedes - Benz lớn nhất Việt Nam</span></h3> &nbsp;
+	                    <h1><span style="color:#0258aa;">{{$infors['cty']}}</span></h1>
+	                    <h3><span style="color:#0258aa;">Nhà phân phối Toyota lớn nhất Việt Nam</span></h3> &nbsp;
 	                    <p>Phân phối xe chính hãng, xe nhập khẩu chính hãng.
 	                        <br> Hệ thống bảo hành toàn quốc.
 	                        <br> Đổi xe cũ - sở hữu xe mới chính hãng giá ưu đãi.
 	                        <br> Dịch vụ hỗ trợ 24/7, Tư vấn lái thử miễn phí.</p>
-	                    <p>Địa chỉ: 02 Trường Chinh, P.Tây Thạnh, Q. Tân Phú, TpHCM
-	                        <br> Điện thoại: 08.3.815.8888 , xưởng dịch vụ: 08.3815.7030
-	                        <br> Email: nguyen-van.quy@vietnamstar-auto.com
+	                    <p>{{$infors['addr']}}
+	                        <br> Điện thoại: {{$infors['mobile']}}
+	                        <br> Email: {{$infors['email']}}
 	                        <br> Website bán hàng: <a href="{!! url('/')!!}">{!! url('/')!!}</a>
-	                        <br><span style="font-size:8px;">LK: <a href="http://www.xemercedes.com.vn/">Mercedes Vietnam</a>,&nbsp;<a href="http://www.xemercedes.com.vn/mercedes-c-class/c200/">Mercedes C200</a> ,<a href="http://www.xemercedes.com.vn/mercedes-s-class/s400/">Mercedes S400</a> ,<a href="http://www.xemercedes.com.vn/mercedes-s-class/s500/">Mercedes S500</a> ,<a href="http://www.xemercedes.com.vn/mercedes-glc-class/">Mercedes GLC</a></span></p>
+	                        <br><span style="font-size:8px;">LK: <a href="{!! url('/')!!}">Toyota Vietnam</a>,&nbsp;<a href="{!! url('/')!!}">Toyota C200</a> ,<a href="{!! url('/')!!}">Toyota S400</a> ,<a href="{!! url('/')!!}">Toyota S500</a> ,<a href="{!! url('/')!!}">Toyota GLC</a></span></p>
 	                </div>
 	            </div>
 	            <div class="clearfix"></div>
