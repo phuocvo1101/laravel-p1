@@ -124,7 +124,7 @@
 
                 <!-- Color product -->
                 <script type="text/javascript">
-                         $(document).ready(function() {
+                    $(document).ready(function() {
                         script360();
                     });
 
@@ -144,43 +144,45 @@
                     }
 
                     // Create Product 360 from img:
-                    $tabs3 = $('div#tabs3');
-                    $('div#tabs3').find('img');
-                    $product_car = '';
-                    $btn_car = '';
-                    $a = '<h3 class="name_tab">Màu nội thất</h3><div id="wrap_360"><div class="camry-cntwrap pg-360"><div class="content-360 wrap_product_car" id="content_360">';
-                    $b = '</div><div class="button-360"><button type="button" class="btn btn-success">Chọn màu</button><div class="btn-color left" id="color_wrap">';
-                    $c = '<div class="clear"></div></div><div class="clear"></div></div></div></div><div class="clear"></div>';
-                    //Find all product img.
-                    $tabs3.find('img[src$="_p.png"]').each(function() {
-                        if ($product_car == '') {
-                            $product_car += '<div class="product_360 active">'+ this.outerHTML + '</div>';
-                        } else {
-                            $product_car += '<div class="product_360">'+ this.outerHTML+ '</div>';
-                        }
+                    if ($tabs3.find('img[src$="_btn.png"]').length > 0) {
+                        $tabs3 = $('div#tabs3');
+                        $product_car = '';
+                        $btn_car = '';
+                        $a = '<h3 class="name_tab">Màu nội thất</h3><div id="wrap_360"><div class="camry-cntwrap pg-360"><div class="content-360 wrap_product_car" id="content_360">';
+                        $b = '</div><div class="button-360"><button type="button" class="btn btn-success">Chọn màu</button><div class="btn-color left" id="color_wrap">';
+                        $c = '<div class="clear"></div></div><div class="clear"></div></div></div></div><div class="clear"></div>';
+                        //Find all product img.
+                        $tabs3.find('img[src$="_p.png"]').each(function() {
+                            if ($product_car == '') {
+                                $product_car += '<div class="product_360 active">'+ this.outerHTML + '</div>';
+                            } else {
+                                $product_car += '<div class="product_360">'+ this.outerHTML+ '</div>';
+                            }
 
-                    });
-                    console.log($product_car);
+                        });
+                        //console.log($product_car);
 
-                    // Create Button 360 from img:
-                    $tabs3.find('img[src$="_btn.png"]').each(function() {
-                        // console.log(this.outerHTML);
-                        if ($btn_car == '') {
-                            $btn_car += '<a href="javascript: void(0)" class="active">'+ this.outerHTML+                
-                            $(this).attr('alt')+
-                            '</a>';
-                        } else {
-                            $btn_car += '<a href="javascript: void(0)" >'+this.outerHTML+                
-                            $(this).attr('alt')+
-                            '</a>';
-                        }
-                        console.log($btn_car);     
+                        // Create Button 360 from img:
+                        $tabs3.find('img[src$="_btn.png"]').each(function() {
+                            // console.log(this.outerHTML);
+                            if ($btn_car == '') {
+                                $btn_car += '<a href="javascript: void(0)" class="active">'+ this.outerHTML+                
+                                $(this).attr('alt')+
+                                '</a>';
+                            } else {
+                                $btn_car += '<a href="javascript: void(0)" >'+this.outerHTML+                
+                                $(this).attr('alt')+
+                                '</a>';
+                            }
+                            //console.log($btn_car);     
 
-                    });    
+                        });    
 
-                    //Put to content_360:
-                    $tabs3.empty();
-                    $tabs3.append($a+$product_car+$b+$btn_car+$c); 
+                        //Put to content_360:
+                        $tabs3.empty();
+                        $tabs3.append($a+$product_car+$b+$btn_car+$c);
+                    }
+                    
                 </script>
                 <!-- End color product -->
             </div>
