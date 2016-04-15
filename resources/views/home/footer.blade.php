@@ -10,10 +10,10 @@
                             <br> Đổi xe cũ - sở hữu xe mới chính hãng giá ưu đãi.
                             <br> Dịch vụ hỗ trợ 24/7, Tư vấn lái thử miễn phí.</p>
                         <p>Địa chỉ: {{$infors['addr']}}
-                            <br> Tel: 0934564161 - 0933631212. Fax: (84.8) 35126969
+                            <br> Tel: 0933631212. Fax: (84.8) 35126969
                             <br> Email: {{$infors['email']}}
-                            <br> Website bán hàng: <a href="http://Toyotavietnamstar.vn/">http://Toyotavietnamstar.vn</a>
-                            <br><span style="font-size:8px;">LK: <a href="http://www.xeToyota.com.vn/">Toyota Vietnam</a>,&nbsp;<a href="http://www.xeToyota.com.vn/Toyota-c-class/c200/">Toyota C200</a> ,<a href="http://www.xeToyota.com.vn/Toyota-s-class/s400/">Toyota S400</a> ,<a href="http://www.xeToyota.com.vn/Toyota-s-class/s500/">Toyota S500</a> ,<a href="http://www.xeToyota.com.vn/Toyota-glc-class/">Toyota GLC</a></span></p>
+                            <br> Website bán hàng: <a href="http://toyotahcm.net.vn">http://toyotahcm.net.vn</a>
+                            <br><span style="font-size:8px;">LK: <a href="http://toyotahcm.net.vn">Toyota Vietnam</a>,&nbsp;<a href="http://toyotahcm.net.vn">Toyota C200</a> ,<a href="http://toyotahcm.net.vn">Toyota S400</a> ,<a href="http://toyotahcm.net.vn">Toyota S500</a> ,<a href="http://toyotahcm.net.vn">Toyota GLC</a></span></p>
                     </div>
                     <h2 class="supporth"><span>Trưởng nhóm bán hàng</span><br>{{$infors['name']}}</h2>
                     <div class="hotline">
@@ -22,12 +22,12 @@
                     <div class="clearfix"></div>
                     <div class="social">
                         <div class="col-dls-4">
-                            <a href="https://www.facebook.com/?ref=tn_tnmn" rel="nofollow" target="_blank"><img src="{{ asset('home/images/icon-face.png') }}" alt="facebook"></a>
-                            <a href="https://plus.google.com/u/0/" rel="nofollow" target="_blank"><img src="{{ asset('home/images/icon-google.png') }}" alt="google"></a>
-                            <a href="https://www.youtube.com/channel/UCRqBoAeTVSXPiXd2zMYY-zQ" rel="nofollow" target="_blank"><img src="{{ asset('home/images/icon-youtube.png') }}" alt="youtube"></a>
+                            <a href="#" rel="nofollow" target="_blank"><img src="{{ asset('home/images/icon-face.png') }}" alt="facebook"></a>
+                            <a href="#" rel="nofollow" target="_blank"><img src="{{ asset('home/images/icon-google.png') }}" alt="google"></a>
+                            <a href="#" rel="nofollow" target="_blank"><img src="{{ asset('home/images/icon-youtube.png') }}" alt="youtube"></a>
                         </div>
                         <div class="col-dls-8">
-                            @ 2016 Bảng quyền thuộc sở hữu Toyotavietnamstar.vn
+                            @ 2016 Bảng quyền thuộc sở hữu http://toyotahcm.net.vn
                             <br>
                             <a href="#" target="_blank" rel="nofollow">Designed by PN2H Design</a>
                         </div>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="col-dls-5 footer-images">
-                    <img src="{{ asset('home/images/flace3.png') }}" alt="avatar">
+                    <img src="{{ asset('home/images/flace4.jpg') }}" alt="avatar">
                 </div>
             </div>
         </div>
