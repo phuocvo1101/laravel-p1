@@ -134,7 +134,7 @@
                         if ($('.button-360 .btn-color a').length > 0) {
 
                             $('.button-360 .btn-color a').click(function() {
-                                var index = $(this).index() - 1;
+                                var index = $(this).index();
                                 $('.button-360 .btn-color a').removeClass('active');
                                 $(this).addClass('active');
                                 $('.wrap_product_car .product_360').removeClass('active');
