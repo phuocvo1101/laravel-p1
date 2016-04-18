@@ -144,11 +144,11 @@
                     }
 
                     // Create Product 360 from img:
-                    $tabs3 = $('div#tabs3');
+                    $tabs3 = $('div#tabs4');
                     if ($tabs3.find('img[src$="_btn.png"]').length > 0) {                        
                         $product_car = '';
                         $btn_car = '';
-                        $a = '<h3 class="name_tab">Màu nội thất</h3><div id="wrap_360"><div class="camry-cntwrap pg-360"><div class="content-360 wrap_product_car" id="content_360">';
+                        $a = '<h3 class="name_tab">Màu ngoại thất</h3><div id="wrap_360"><div class="camry-cntwrap pg-360"><div class="content-360 wrap_product_car" id="content_360">';
                         $b = '</div><div class="button-360"><button type="button" class="btn btn-success">Chọn màu</button><div class="btn-color left" id="color_wrap">';
                         $c = '<div class="clear"></div></div><div class="clear"></div></div></div></div><div class="clear"></div>';
                         //Find all product img.
