@@ -12,7 +12,7 @@
             <div class="wrapper">
                 <div class="link-other">
                     <div class="link-others">
-                        <span class="name-car">{!! $product->name!!}</span><a rel="tabs1" href="javascript:void(0)">Đánh giá</a><a rel="tabs2" href="javascript:void(0)">Thông số kỹ thuật</a><a rel="tabs3" href="javascript:void(0)">Màu nội thất</a><a rel="tabs4" href="javascript:void(0)">Màu ngoại thất</a>
+                        <span class="name-car">{!! $product->name!!}</span><a rel="tabs1" href="javascript:void(0)">Đánh giá</a><a rel="tabs2" href="javascript:void(0)">Thông số kỹ thuật</a><a rel="tabs3" href="javascript:void(0)">Nội thất</a><a rel="tabs4" href="javascript:void(0)">Ngoại thất</a>
                     </div>
                 </div>
                 <script type="text/javascript">

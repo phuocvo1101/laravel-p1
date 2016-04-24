@@ -1,7 +1,8 @@
 <div class="col-dl-3 left-content">
                     <h3 class="titlel"><span>Các dòng xe<img src="{!! asset('home/images/icon-3.png')!!}" alt="danh muc"></span></h3>
                     <!-- Mobile menu -->
-                    <?php  $menu_level_1 = DB::table('cates')->select('id','name','alias','parent_id')->where('parent_id', 0)->get(); ?>
+                    <?php  $menu_level_1 = DB::table('cates')->select('id','name','alias','parent_id', 'order')->where('parent_id', 0)->orderBy('order', 'asc')->get();
+                    ?>
                     <div class="left-menus">
                         <ul class="left-menu">
                             @foreach($menu_level_1 as $item1)

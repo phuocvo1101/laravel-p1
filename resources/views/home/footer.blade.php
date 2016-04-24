@@ -15,7 +15,7 @@
                             <br> Website bán hàng: <a href="http://toyotahcm.net.vn">http://toyotahcm.net.vn</a>
                             <br><span style="font-size:8px;">LK: <a href="http://toyotahcm.net.vn">Toyota Vietnam</a>,&nbsp;<a href="http://toyotahcm.net.vn">Toyota C200</a> ,<a href="http://toyotahcm.net.vn">Toyota S400</a> ,<a href="http://toyotahcm.net.vn">Toyota S500</a> ,<a href="http://toyotahcm.net.vn">Toyota GLC</a></span></p>
                     </div>
-                    <h2 class="supporth"><span>Trưởng nhóm bán hàng</span><br>{{$infors['name']}}</h2>
+                    <h2 class="supporth"><span>{{$infors['tuvan']}}</span><br>{{$infors['name']}}</h2>
                     <div class="hotline">
                         <h2>{{$infors['mobile']}}</h2> Hỗ trợ 24/7
                     </div>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-dl-7 footer-avatar">
                         <img src="{{ asset('home/images/avatar.png') }}" alt="avatar">
-                        <h2 class="col-dl-6 supporth"><span>Trưởng nhóm bán hàng</span><br>{{$infors['name']}}</h2>
+                        <h2 class="col-dl-6 supporth"><span>{{$infors['tuvan']}}</span><br>{{$infors['name']}}</h2>
                         <div class="col-dl-4 hotline">
                             <h2>{{$infors['mobile']}}</h2> Hỗ trợ 24/7
                         </div>

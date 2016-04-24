@@ -13,7 +13,7 @@
                 <div class="hotline">
                     <h2>{{$infors['mobile']}}</h2> Hỗ trợ 24/7
                 </div>
-                <h2 class="supporth"><span>Trưởng nhóm bán hàng</span><br>{{$infors['name']}}</h2>
+                <h2 class="supporth"><span>{{$infors['tuvan']}}</span><br>{{$infors['name']}}</h2>
                 <div class="clearfix"></div>
                 <div class="navmenuss">
                     <ul class="nav navbar-nav navbar-right nav-menus">

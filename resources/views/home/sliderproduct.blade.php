@@ -40,7 +40,7 @@
                         <h3 class="price-detail">Giá: {!! number_format($product->price,0,',','.') !!} VNĐ</h3>
                         <p>{!! $product->intro!!}</p>
                         <div class="tuvan">
-                            <h2 class="supporth"><span>Trưởng nhóm bán hàng</span><br>{{$infors['name']}}</h2>
+                            <h2 class="supporth"><span>{{$infors['tuvan']}}</span><br>{{$infors['name']}}</h2>
                             <div class="hotline">
                                 <h2>{{$infors['mobile']}}</h2> Hỗ trợ 24/7
                             </div>

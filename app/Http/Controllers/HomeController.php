@@ -19,8 +19,9 @@ class HomeController extends Controller
     {
        // $this->middleware('auth');
         $infors = array(
-                        'name' => "Mr. Hiếu" ,
-                        'mobile' => "093.363.1212",
+                        'name' => "" ,
+                        'tuvan' => "Tư vấn bán hàng" ,
+                        'mobile' => "0933 63 1212",
                         'cty' => "TOYOTA HIROSHIMA TÂN CẢNG - HT",
                         'email' => "toyotahcm.tancang@gmail.com",
                         'addr' =>  "220 Bis Điện Biên Phủ (Nguyễn Hữu Cảnh nối dài), P.22, Q.Bình Thạnh, TPHCM"                   
