@@ -41,7 +41,53 @@ class HomeController extends Controller
     public function index()
     {
         $variable1="I am Data";
-        $promotion_product = DB::table('products')->select('id','name','price','image')->where('promotion_product', 1)->orderBy('id', 'desc')->skip(0)->take(6)->get();
+        $promotion_product =array();
+        $vios_product = DB::table('products')
+            ->select('id','name','price','image')
+            ->where('promotion_product', 1)
+            ->where('cate_id', 4)
+            ->orderBy('id', 'desc')->skip(0)->take(3)->get();
+
+        $inova_product = DB::table('products')
+            ->select('id','name','price','image')
+            ->where('promotion_product', 1)
+            ->where('cate_id', 7)
+            ->orderBy('id', 'desc')->skip(0)->take(3)->get();
+       
+        $fortuner_product = DB::table('products')
+            ->select('id','name','price','image')
+            ->where('promotion_product', 1)
+            ->where('cate_id', 5)
+            ->orderBy('id', 'desc')->skip(0)->take(3)->get();
+         
+        if($vios_product != null){
+            foreach ($vios_product as $value) {
+                $promotion_product[] = $value;
+            }
+        }
+        if($inova_product != null){
+            foreach ($inova_product as $value) {
+                $promotion_product[] = $value;
+            }
+        }
+
+        if($fortuner_product != null){
+            foreach ($fortuner_product as $value) {
+                $promotion_product[] = $value;
+            }
+        }
+
+        $soluong = count($promotion_product);
+        $diff_product = DB::table('products')
+        ->select('id','name','price','image')
+        ->where('promotion_product', 1)
+        ->whereNotIn('cate_id', [4,7,5])
+        ->orderBy('id', 'desc')->skip(0)->take(12 - $soluong)->get();
+        if($diff_product != null){
+            foreach ($diff_product as $value) {
+                $promotion_product[] = $value;
+            }
+        }
         $import_product = DB::table('products')->select('id','name','price','image')->where('import_product', 1)->orderBy('id', 'desc')->skip(0)->take(6)->get();
         $old_product = DB::table('products')->select('id','name','price','image')->where('old_product', 1)->orderBy('id', 'desc')->skip(0)->take(6)->get();
         

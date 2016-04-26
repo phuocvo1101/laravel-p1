@@ -111,8 +111,8 @@ class ProductController extends Controller
     	$product->cate_id = Request::Input('sltParent');
     	$product->new_product = Request::Input('newPro') == 'on' ? 1 : 0;
     	$product->old_product = Request::Input('oldPro') == 'on' ? 1 : 0;
-    	$product->promotion_product = Request::Input('importPro') == 'on' ? 1 : 0;
-    	$product->import_product = Request::Input('promotionPro') == 'on' ? 1 : 0;
+    	$product->promotion_product = Request::Input('promotionPro') == 'on' ? 1 : 0;
+    	$product->import_product = Request::Input('importPro') == 'on' ? 1 : 0;
     	if (!empty(Request::File('fImages'))) {
     		$img_current = 'upload/'.Request::Input('img_current');
     		if(File::exists($img_current)) {
