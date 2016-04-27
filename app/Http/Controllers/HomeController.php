@@ -88,7 +88,7 @@ class HomeController extends Controller
                 $promotion_product[] = $value;
             }
         }
-        $import_product = DB::table('products')->select('id','name','price','image')->where('import_product', 1)->orderBy('id', 'desc')->skip(0)->take(6)->get();
+        $import_product = DB::table('products')->select('id','name','price','image')->where('import_product', 1)->orderBy('id', 'desc')->skip(0)->take(9)->get();
         $old_product = DB::table('products')->select('id','name','price','image')->where('old_product', 1)->orderBy('id', 'desc')->skip(0)->take(6)->get();
         
         return view('home.index',compact('variable1','promotion_product','import_product','old_product'));
