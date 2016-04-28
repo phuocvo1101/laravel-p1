@@ -27,8 +27,8 @@
             <label>Information: </label> </br>
             <input  type="checkbox" name="newPro" @if ($product['new_product'] == 1) checked="checked" @endif /> Sản Phẩm Mới </br>
             <input type="checkbox" name="oldPro" @if ($product['old_product'] == 1) checked="checked" @endif /> Sản Phẩm Đã Qua Sử Dụng </br>
-            <input type="checkbox" name="importPro" @if ($product['promotion_product'] == 1) checked="checked" @endif /> Sản Phẩm Nhập Khẩu </br>
-            <input type="checkbox" name="promotionPro" @if ($product['import_product'] == 1) checked="checked" @endif /> Sản Phẩm Khuyến Mãi </br>
+            <input type="checkbox" name="importPro" @if ($product['import_product'] == 1) checked="checked" @endif /> Sản Phẩm Nhập Khẩu </br>
+            <input type="checkbox" name="promotionPro" @if ($product['promotion_product'] == 1) checked="checked" @endif /> Sản Phẩm Khuyến Mãi </br>
         </div>
         <div class="form-group">
             <label>Price</label>
