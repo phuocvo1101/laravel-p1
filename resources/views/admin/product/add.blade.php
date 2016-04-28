@@ -26,7 +26,7 @@
             <input  type="checkbox" name="newPro" /> Sản Phẩm Mới </br>
             <input type="checkbox" name="oldPro" /> Sản Phẩm Đã Qua Sử Dụng </br>
             <input type="checkbox" name="importPro"/> Sản Phẩm Nhập Khẩu </br>
-            <input type="checkbox" name="promotionPro"/> Sản Phẩm Khuyến Mãi </br>
+            <input type="checkbox" name="promotionPro"/> Sản phẩm Trong Nước </br>
         </div>
         <div class="form-group">
             <label>Price</label>
