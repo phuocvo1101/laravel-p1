@@ -145,14 +145,14 @@
 
                     // Create Product 360 from img:
                     $tabs3 = $('div#tabs4');
-                    if ($tabs3.find('img[src$="_btn.png"]').length > 0) {                        
+                    if ($tabs3.find('img[src*="_btn.png"]').length > 0) {                        
                         $product_car = '';
                         $btn_car = '';
                         $a = '<h3 class="name_tab">Màu ngoại thất</h3><div id="wrap_360"><div class="camry-cntwrap pg-360"><div class="content-360 wrap_product_car" id="content_360">';
                         $b = '</div><div class="button-360"><button type="button" class="btn btn-success">Chọn màu</button><div class="btn-color left" id="color_wrap">';
                         $c = '<div class="clear"></div></div><div class="clear"></div></div></div></div><div class="clear"></div>';
                         //Find all product img.
-                        $tabs3.find('img[src$="_p.png"]').each(function() {
+                        $tabs3.find('img[src*="_p.png"]').each(function() {
                             if ($product_car == '') {
                                 $product_car += '<div class="product_360 active">'+ this.outerHTML + '</div>';
                             } else {
@@ -163,7 +163,7 @@
                         //console.log($product_car);
 
                         // Create Button 360 from img:
-                        $tabs3.find('img[src$="_btn.png"]').each(function() {
+                        $tabs3.find('img[src*="_btn.png"]').each(function() {
                             // console.log(this.outerHTML);
                             if ($btn_car == '') {
                                 $btn_car += '<a href="javascript: void(0)" class="active">'+ this.outerHTML+                
