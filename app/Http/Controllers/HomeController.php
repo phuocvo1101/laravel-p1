@@ -59,6 +59,12 @@ class HomeController extends Controller
             ->where('promotion_product', 1)
             ->where('cate_id', 5)
             ->orderBy('id', 'desc')->skip(0)->take(3)->get();
+
+        $altis_product = DB::table('products')
+            ->select('id','name','price','image')
+            ->where('promotion_product', 1)
+            ->where('cate_id', 8)
+            ->orderBy('id', 'desc')->skip(0)->take(3)->get();
          
         if($vios_product != null){
             foreach ($vios_product as $value) {
@@ -77,12 +83,18 @@ class HomeController extends Controller
             }
         }
 
+        if($altis_product != null){
+            foreach ($altis_product as $value) {
+                $promotion_product[] = $value;
+            }
+        }
+
         $soluong = count($promotion_product);
         $diff_product = DB::table('products')
         ->select('id','name','price','image')
         ->where('promotion_product', 1)
-        ->whereNotIn('cate_id', [4,7,5])
-        ->orderBy('id', 'desc')->skip(0)->take(12 - $soluong)->get();
+        ->whereNotIn('cate_id', [4,7,5,8])
+        ->orderBy('id', 'desc')->skip(0)->take(15 - $soluong)->get();
         if($diff_product != null){
             foreach ($diff_product as $value) {
                 $promotion_product[] = $value;
