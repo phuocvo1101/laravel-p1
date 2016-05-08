@@ -42,8 +42,7 @@
                     <!-- Tabs -->
                     <div class="detail_news" id="tabs1">
                         <h3 class="name_tab">{!! $product->title!!}</h3>
-                        <br>
-                        </hr >
+                        <p style="border: 1px dotted #e0ebeb"></p>
                        {!! $product->content1!!}
 					</div>
 
