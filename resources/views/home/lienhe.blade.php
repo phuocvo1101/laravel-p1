@@ -61,7 +61,7 @@
 	                <br>
 	                <div class="infofooter">
 	                    <h1><span style="color:#0258aa;">{{$infors['cty']}}</span></h1>
-	                    <h3><span style="color:#0258aa;">Nhà phân phối Toyota lớn nhất Việt Nam</span></h3> &nbsp;
+	                    <h3><span style="color:#0258aa;">Nhà phân phối Mercedes lớn nhất Việt Nam</span></h3> &nbsp;
 	                    <p>Phân phối xe chính hãng, xe nhập khẩu chính hãng.
 	                        <br> Hệ thống bảo hành toàn quốc.
 	                        <br> Đổi xe cũ - sở hữu xe mới chính hãng giá ưu đãi.
@@ -70,7 +70,7 @@
 	                        <br> Điện thoại: {{$infors['mobile']}}
 	                        <br> Email: {{$infors['email']}}
 	                        <br> Website bán hàng: <a href="{!! url('/')!!}">{!! url('/')!!}</a>
-	                        <br><span style="font-size:8px;">LK: <a href="{!! url('/')!!}">Toyota Vietnam</a>,&nbsp;<a href="{!! url('/')!!}">Toyota C200</a> ,<a href="{!! url('/')!!}">Toyota S400</a> ,<a href="{!! url('/')!!}">Toyota S500</a> ,<a href="{!! url('/')!!}">Toyota GLC</a></span></p>
+	                        <br><span style="font-size:8px;">LK: <a href="{!! url('/')!!}">Mercedes Vietnam</a>,&nbsp;<a href="{!! url('/')!!}">Mercedes C200</a> ,<a href="{!! url('/')!!}">Mercedes E250 AMG</a> ,<a href="{!! url('/')!!}">Mercedes S500L</a> ,<a href="{!! url('/')!!}">Mercedes GLC</a></span></p>
 	                </div>
 	            </div>
 	            <div class="clearfix"></div>

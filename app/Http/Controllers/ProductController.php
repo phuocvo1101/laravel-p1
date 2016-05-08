@@ -35,13 +35,11 @@ class ProductController extends Controller
     	
     	$product = new Product();
     	$product->name = $product_request->txtName;
-    	$product->alias = $product_request->txtPrice;
+        $product->title = $product_request->txtTitle;
+    	$product->alias = $product_request->txtName;
     	$product->price = $product_request->txtPrice;
     	$product->intro = $product_request->txtIntro;
-    	$product->content1 = $product_request->txtContent1;
-        $product->content2 = $product_request->txtContent2;
-        $product->content3 = $product_request->txtContent3;
-        $product->content4 = $product_request->txtContent4;
+    	$product->content1 = $product_request->txtContent;
     	$product->image = $file_name;
     	$product->keywords = $product_request->txtKeywords;
     	$product->description = $product_request->txtDescription;
@@ -49,8 +47,6 @@ class ProductController extends Controller
     	$product->cate_id = $product_request->sltParent;
     	$product->new_product = $product_request->newPro == 'on' ? 1 : 0;
     	$product->old_product = $product_request->oldPro == 'on' ? 1 : 0;
-    	$product->promotion_product = $product_request->importPro == 'on' ? 1 : 0;
-    	$product->import_product = $product_request->promotionPro == 'on' ? 1 : 0;
     	$product_request->file('fImages')->move('upload/',$file_name);
     	$product->save();
     	$product_id = $product->id;
@@ -97,22 +93,18 @@ class ProductController extends Controller
     }
     public function postEdit (Request $request,$id) {
     	$product = Product::find($id);
+        $product->title = Request::Input('txtTitle');
     	$product->name = Request::Input('txtName');
     	$product->alias = changeTitle(Request::Input('txtName')) ;
     	$product->price = Request::Input('txtPrice');
     	$product->intro = Request::Input('txtIntro');
-    	$product->content1 = Request::Input('txtContent1');
-        $product->content2 = Request::Input('txtContent2');
-        $product->content3 = Request::Input('txtContent3');
-        $product->content4 = Request::Input('txtContent4');
+    	$product->content1 = Request::Input('txtContent');
     	$product->keywords = Request::Input('txtKeywords');
     	$product->description = Request::Input('txtDescription');
     	$product->user_id = Auth::user()->id;
     	$product->cate_id = Request::Input('sltParent');
     	$product->new_product = Request::Input('newPro') == 'on' ? 1 : 0;
     	$product->old_product = Request::Input('oldPro') == 'on' ? 1 : 0;
-    	$product->promotion_product = Request::Input('promotionPro') == 'on' ? 1 : 0;
-    	$product->import_product = Request::Input('importPro') == 'on' ? 1 : 0;
     	if (!empty(Request::File('fImages'))) {
     		$img_current = 'upload/'.Request::Input('img_current');
     		if(File::exists($img_current)) {

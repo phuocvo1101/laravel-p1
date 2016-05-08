@@ -12,7 +12,7 @@
             <div class="wrapper">
                 <div class="link-other">
                     <div class="link-others">
-                        <span class="name-car">{!! $product->name!!}</span><a rel="tabs1" href="javascript:void(0)">Đánh giá</a><a rel="tabs2" href="javascript:void(0)">Thông số kỹ thuật</a><a rel="tabs3" href="javascript:void(0)">Nội thất</a><a rel="tabs4" href="javascript:void(0)">Ngoại thất</a>
+                        <span class="name-car">{!! $product->name!!}</span>
                     </div>
                 </div>
                 <script type="text/javascript">
@@ -36,31 +36,16 @@
                     <div>
                         <select class="slcOption" onchange="opentab(this.options[this.selectedIndex].value)">
                             <option value="tabs1">Đánh giá</option>
-                            <option value="tabs2">Thông số kỹ thuật</option>
-                            <option value="tabs3">Màu nội thất</option>
-                            <option value="tabs4">Màu ngoại thất</option>
                         </select>
                     </div>
                     <div class="clearfix"></div>
                     <!-- Tabs -->
                     <div class="detail_news" id="tabs1">
-                        <h3 class="name_tab">Đánh giá</h3><img alt="" src="{{ asset('upload/detail/chitiet.png') }}" style="height:288px;width:876px;">
+                        <h3 class="name_tab">{!! $product->title!!}</h3>
                         <br>
+                        </hr >
                        {!! $product->content1!!}
 					</div>
-                    <div class="detail_news detail_tab" id="tabs2">
-                        <h3 class="name_tab">Thông số kỹ thuật</h3>
-                        {!! $product->content2!!}
-
-                        </div>
-                    <div class="detail_news detail_tab" id="tabs3">
-                        <h3 class="name_tab">Màu nội thất</h3>
-                        {!! $product->content3!!}
-                        </div>
-                    <div class="detail_news detail_tab" id="tabs4">
-                        <h3 class="name_tab">Màu ngoại thất</h3>
-                        {!! $product->content4!!}
-                        </div>
 
                     <div class="clear"></div>
                     <!-- End tabs-->

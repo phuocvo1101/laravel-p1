@@ -48,7 +48,7 @@
             <div class="footerfixeds container">
                 <div class="footerfixeds-sub">
                     <div class="col-dl-5 info_footer">
-                        <h5>{{$infors['cty']}}<br>Nhà phân phối Toyota lớn nhất Việt Nam</h5>
+                        <h5>{{$infors['cty']}}<br>Nhà phân phối Mercedes lớn nhất Việt Nam</h5>
                     </div>
                     <div class="col-dl-7 footer-avatar">
                         <img src="{{ asset('home/images/avatar.png') }}" alt="avatar">

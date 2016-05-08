@@ -24,11 +24,13 @@
             <input class="form-control" name="txtName" placeholder="Please Enter Username" value="{!! old('txtName'), isset($product['name'])? $product['name']:null  !!}" />
         </div>
         <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" name="txtTitle" placeholder="Please Enter Title" value ="{!! old('txtTitle'), isset($product['title'])? $product['title']:null  !!}" />
+        </div>
+        <div class="form-group">
             <label>Information: </label> </br>
-            <input  type="checkbox" name="newPro" @if ($product['new_product'] == 1) checked="checked" @endif /> Sản Phẩm Mới </br>
-            <input type="checkbox" name="oldPro" @if ($product['old_product'] == 1) checked="checked" @endif /> Sản Phẩm Đã Qua Sử Dụng </br>
-            <input type="checkbox" name="importPro" @if ($product['import_product'] == 1) checked="checked" @endif /> Sản Phẩm Nhập Khẩu </br>
-            <input type="checkbox" name="promotionPro" @if ($product['promotion_product'] == 1) checked="checked" @endif /> Sản phẩm Trong Nước </br>
+            <input  type="checkbox" name="newPro" @if ($product['new_product'] == 1) checked="checked" @endif /> Mercedes Việt Nam </br>
+            <input type="checkbox" name="oldPro" @if ($product['old_product'] == 1) checked="checked" @endif /> Mercedes Nhập Khẩu </br>
         </div>
         <div class="form-group">
             <label>Price</label>
@@ -40,24 +42,9 @@
             <script type="text/javascript">ckeditor('txtIntro')</script>
         </div>
        <div class="form-group">
-            <label>Content 1: Đánh giá</label>
-            <textarea class="form-control" rows="3" name="txtContent1">{!! old('txtContent1'), isset($product['content1'])? $product['content1']:null !!}</textarea>
-            <script type="text/javascript">ckeditor("txtContent1")</script>
-        </div>
-         <div class="form-group">
-            <label>Content 2: Thông số kỹ thuật</label>
-            <textarea class="form-control" rows="3" name="txtContent2">{!! old('txtContent2'), isset($product['content2'])? $product['content2']:null !!}</textarea>
-            <script type="text/javascript">ckeditor("txtContent2")</script>
-        </div>
-         <div class="form-group">
-            <label>Content 3: Màu nội thất</label>
-            <textarea class="form-control" rows="3" name="txtContent3">{!! old('txtContent3'), isset($product['content3'])? $product['content3']:null !!}</textarea>
-            <script type="text/javascript">ckeditor("txtContent3")</script>
-        </div>
-         <div class="form-group">
-            <label>Content 4: Màu ngoại thất</label>
-            <textarea class="form-control" rows="3" name="txtContent4">{!! old('txtContent4'), isset($product['content4'])? $product['content4']:null !!}</textarea>
-            <script type="text/javascript">ckeditor("txtContent4")</script>
+            <label>Content :</label>
+            <textarea class="form-control" rows="3" name="txtContent">{!! old('txtContent'), isset($product['content1'])? $product['content1']:null !!}</textarea>
+            <script type="text/javascript">ckeditor("txtContent")</script>
         </div>
         <div class="form-group">
             <label>Images Current </label>
