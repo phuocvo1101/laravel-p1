@@ -4,7 +4,7 @@
                 <div class="col-dls-7">
                     <div class="infofooter">
                         <h1><span style="color:#0258aa;">{{$infors['cty']}}</span></h1>
-                        <h3><span style="color:#0258aa;">Nhà phân phối Toyota lớn nhất Việt Nam</span></h3> &nbsp;
+                        <h3><span style="color:#0258aa;">Nhà phân phối Mercedes lớn nhất Việt Nam</span></h3> &nbsp;
                         <p>Phân phối xe chính hãng, xe nhập khẩu chính hãng.
                             <br> Hệ thống bảo hành toàn quốc.
                             <br> Đổi xe cũ - sở hữu xe mới chính hãng giá ưu đãi.
@@ -13,8 +13,8 @@
                             <br> Tel: 0933631212. Fax: 0835 12 3939
                             <br> Hotline dịch vụ: 0944 979797 (24/7)
                             <br> Email: {{$infors['email']}}
-                            <br> Website bán hàng: <a href="http://toyotahcm.net.vn">http://toyotahcm.net.vn</a>
-                            <br><span style="font-size:8px;">LK: <a href="http://toyotahcm.net.vn">Toyota Vietnam</a>,&nbsp;<a href="http://toyotahcm.net.vn">Toyota C200</a> ,<a href="http://toyotahcm.net.vn">Toyota S400</a> ,<a href="http://toyotahcm.net.vn">Toyota S500</a> ,<a href="http://toyotahcm.net.vn">Toyota GLC</a></span></p>
+                            <br> Website bán hàng: <a href="mercedesglc300.com">mercedesglc300.com</a>
+                            <br><span style="font-size:8px;">LK: <a href="mercedesglc300.com">Mercedes Vietnam</a>,&nbsp;<a href="http://mercedesglc300.com">Mercedes C200</a> ,<a href="http://mercedesglc300.com">Mercedes S400</a> ,<a href="http://mercedesglc300.com">Mercedes S500</a> ,<a href="http://mercedesglc300.com">Mercedes GLC</a></span></p>
                     </div>
                     <h2 class="supporth"><span>{{$infors['tuvan']}}</span><br>{{$infors['name']}}</h2>
                     <div class="hotline">
@@ -28,7 +28,7 @@
                             <a href="#" rel="nofollow" target="_blank"><img src="{{ asset('home/images/icon-youtube.png') }}" alt="youtube"></a>
                         </div>
                         <div class="col-dls-8">
-                            @ 2016 Bảng quyền thuộc sở hữu http://toyotahcm.net.vn
+                            @ 2016 Bảng quyền thuộc sở hữu mercedesglc300.com
                             <br>
                             <a href="#" target="_blank" rel="nofollow">Designed by PN2H Design</a>
                         </div>
