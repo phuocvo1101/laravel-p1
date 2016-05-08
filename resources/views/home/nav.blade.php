@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand"><img src="{{ asset('home/images/logo.png') }}" alt="logo"></a>
+                <a href="/" class="navbar-brand"><img src="{{ asset('home/images/logo1.png') }}" alt="logo"></a>
             </div>
             <nav class="navbar-collapse bs-navbar-collapse navmenus collapse" aria-expanded="false" style="height: 1px;">
                 <div class="hotline">

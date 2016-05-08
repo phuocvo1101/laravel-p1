@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="col-dls-5 footer-images">
-                    <img src="{{ asset('home/images/flace4.jpg') }}" alt="avatar">
+                    <img src="{{ asset('home/images/footer_img.jpg') }}" alt="avatar">
                 </div>
             </div>
         </div>
