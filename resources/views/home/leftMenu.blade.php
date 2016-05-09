@@ -8,7 +8,7 @@
                             @foreach($menu_level_1 as $item1)
                                 <li><a href="{!! URL::route('loaisanpham', $item1->id) !!}">{{ $item1->name }}</a>
                                     <ul class="left-menu def2">
-                                        <?php $product = DB::table('products')->select('id','name','alias')->where('cate_id', $item1->id)->get(); ?>
+                                        <?php $product = DB::table('products')->select('id','name','alias')->where('cate_id', $item1->id)->orderBy('id', 'asc')->get(); ?>
                                         @foreach ($product as $item2)
                                         <li><a href="{!! URL::route('detailProduct', $item2->id) !!}">{{ $item2->name}}</a></li>
                                         @endforeach
