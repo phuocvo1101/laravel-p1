@@ -26,6 +26,10 @@
             <input class="form-control" name="txtTitle" placeholder="Please Enter Title" value ="{!! old('txtTitle') !!}" />
         </div>
         <div class="form-group">
+            <label>Product Order</label>
+            <input class="form-control" name="txtOrder" placeholder="Please Enter Category Order" />
+        </div>
+        <div class="form-group">
             <label>Information: </label> </br>
             <input  type="checkbox" name="newPro" /> Mercedes Việt Nam</br>
             <input type="checkbox" name="oldPro" /> Mercedes Nhập Khẩu </br>

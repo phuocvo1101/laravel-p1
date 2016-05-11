@@ -65,11 +65,13 @@
             </div>
 
             <!-- Tin tuc -->
-                @include('home.tintuchome')
+                @yield('tintuc')
+                <!-- @include('home.tintuchome') -->
             <!-- End tin tuc -->
 
             <!-- Tin khuyen mai -->
-                @include('home.tinkhuyenmai')
+                @yield('tinkhuyenmai')
+               <!--  @include('home.tinkhuyenmai') -->
             <!-- End tin khuyen mai -->
         </div>
     </section>

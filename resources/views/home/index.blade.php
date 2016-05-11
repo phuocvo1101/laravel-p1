@@ -69,3 +69,12 @@
                 </div>
                 <!-- End right content -->
 @endsection
+
+
+@section('tintuc')
+    @include('home.tintuchome')
+@stop
+
+@section('tinkhuyenmai')
+    @include('home.tinkhuyenmai')
+@stop

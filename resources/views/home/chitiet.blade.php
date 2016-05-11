@@ -33,11 +33,11 @@
                 </script>
                 <!-- Main product content -->
                 <div class="content">
-                    <div>
+                    <!-- <div>
                         <select class="slcOption" onchange="opentab(this.options[this.selectedIndex].value)">
                             <option value="tabs1">Đánh giá</option>
                         </select>
-                    </div>
+                    </div> -->
                     <div class="clearfix"></div>
                     <!-- Tabs -->
                     <div class="detail_news" id="tabs1">

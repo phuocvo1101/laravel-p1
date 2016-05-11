@@ -28,6 +28,10 @@
             <input class="form-control" name="txtTitle" placeholder="Please Enter Title" value ="{!! old('txtTitle'), isset($product['title'])? $product['title']:null  !!}" />
         </div>
         <div class="form-group">
+            <label>Product Order</label>
+            <input class="form-control" name="txtOrder" placeholder="Please Enter Category Order" value ="{!! old('txtOrder'), isset($product['txtOrder'])? $product['txtOrder']:null  !!}" />
+        </div>
+        <div class="form-group">
             <label>Information: </label> </br>
             <input  type="checkbox" name="newPro" @if ($product['new_product'] == 1) checked="checked" @endif /> Mercedes Việt Nam </br>
             <input type="checkbox" name="oldPro" @if ($product['old_product'] == 1) checked="checked" @endif /> Mercedes Nhập Khẩu </br>

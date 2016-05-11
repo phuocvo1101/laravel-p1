@@ -36,6 +36,7 @@ class ProductController extends Controller
     	$product = new Product();
     	$product->name = $product_request->txtName;
         $product->title = $product_request->txtTitle;
+        $product->order = $product_request->txtOrder;
     	$product->alias = $product_request->txtName;
     	$product->price = $product_request->txtPrice;
     	$product->intro = $product_request->txtIntro;
@@ -95,6 +96,7 @@ class ProductController extends Controller
     	$product = Product::find($id);
         $product->title = Request::Input('txtTitle');
     	$product->name = Request::Input('txtName');
+        $product->order = Request::Input('txtOrder');
     	$product->alias = changeTitle(Request::Input('txtName')) ;
     	$product->price = Request::Input('txtPrice');
     	$product->intro = Request::Input('txtIntro');
