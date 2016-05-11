@@ -50,7 +50,7 @@ class HomeController extends Controller
     public function detailProduct ($id)
     { 
         $product = DB::table('products')->select('*')->where('id', $id)->first();
-        $relatedProducts = DB::table('products')->select('id','name','price','image')->where('cate_id',$product->cate_id)->where('id','<>',$product->id)->orderBy('id', 'desc')->skip(0)->take(3)->get();
+        $relatedProducts = DB::table('products')->select('id','name','price','image','order')->where('cate_id',$product->cate_id)->where('id','<>',$product->id)->orderBy('id', 'desc')->skip(0)->take(3)->get();
         $img_detail = DB::table('product_images')->select('id','image')->where('product_id',$id)->orderBy('id', 'desc')->skip(0)->take(3)->get();
         return view('home.chitiet',compact('product','relatedProducts','img_detail'));
     }
@@ -59,26 +59,26 @@ class HomeController extends Controller
     {
         $cate = DB::table('cates')->select('id','name')->where('id', $id)->first();
         $loai = $cate->name;
-        $cate_products = DB::table('products')->select('id','name','price','image')->where('cate_id', $id)->orderBy('id', 'desc')->paginate($this->pag);
+        $cate_products = DB::table('products')->select('id','name','price','image','order')->where('cate_id', $id)->orderBy('order', 'asc')->paginate($this->pag);
         return view('home.sanpham',compact('loai','cate_products'));
     }
 
     public function newProduct ()
     {
         $variable1="I am Data";
-        $new_product = DB::table('products')->select('id','name','price','image')->where('new_product', 1)->orderBy('id', 'desc')->get();
-        $old_product = DB::table('products')->select('id','name','price','image')->where('old_product', 1)->orderBy('id', 'desc')->get();
+        $new_product = DB::table('products')->select('id','name','price','image','order')->where('new_product', 1)->orderBy('order', 'asc')->get();
+        $old_product = DB::table('products')->select('id','name','price','image','order')->where('old_product', 1)->orderBy('order', 'asc')->get();
         
         return view('home.index',compact('variable1','new_product','old_product'));
         // $loai = 'xe mới';
-        // $cate_products = DB::table('products')->select('id','name','price','image')->where('new_product', 1)->orderBy('id', 'desc')->paginate($this->pag);
+        // $cate_products = DB::table('products')->select('id','name','price','image','order')->where('new_product', 1)->orderBy('id', 'desc')->paginate($this->pag);
         // return view('home.sanpham',compact('loai','cate_products'));
     }
 
     public function oldProduct ()
     {
         $loai = 'xe đã qua sử dụng';
-        $cate_products = DB::table('products')->select('id','name','price','image')->where('old_product', 1)->orderBy('id', 'desc')->paginate($this->pag);
+        $cate_products = DB::table('products')->select('id','name','price','image','order')->where('old_product', 1)->orderBy('order', 'asc')->paginate($this->pag);
         return view('home.sanpham',compact('loai','cate_products'));
     }
 
