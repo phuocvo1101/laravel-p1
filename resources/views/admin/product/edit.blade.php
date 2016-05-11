@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
             <label>Product Order</label>
-            <input class="form-control" name="txtOrder" placeholder="Please Enter Category Order" value ="{!! old('txtOrder'), isset($product['txtOrder'])? $product['txtOrder']:null  !!}" />
+            <input class="form-control" name="txtOrder" placeholder="Please Enter Category Order" value ="{!! old('txtOrder'), isset($product['order'])? $product['order']:null  !!}" />
         </div>
         <div class="form-group">
             <label>Information: </label> </br>

@@ -41,8 +41,8 @@ class HomeController extends Controller
     public function index()
     {
         $variable1="I am Data";
-        $new_product = DB::table('products')->select('id','name','price','image')->where('new_product', 1)->orderBy('id', 'desc')->skip(0)->take(9)->get();
-        $old_product = DB::table('products')->select('id','name','price','image')->where('old_product', 1)->orderBy('id', 'desc')->skip(0)->take(6)->get();
+        $new_product = DB::table('products')->select('id','name','price','image','order')->where('new_product', 1)->orderBy('order', 'asc')->skip(0)->take(9)->get();
+        $old_product = DB::table('products')->select('id','name','price','image','order')->where('old_product', 1)->orderBy('order', 'asc')->skip(0)->take(6)->get();
         
         return view('home.index',compact('variable1','new_product','old_product'));
     }
