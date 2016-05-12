@@ -22,7 +22,7 @@ class HomeController extends Controller
                         'name' => "" ,
                         'tuvan' => "Tư vấn bán hàng" ,
                         'mobile' => "0934 0911 93",
-                        'cty' => "Công ty Mercedes-Benz Haxaco Việt Nam",
+                        'cty' => "Công ty Vietnam star",
                         'email' => "huycao.mercedesvietnam@gmail.com",
                         'addr' =>  "811 Nguyễn Văn Linh, Phường Tân Phong, Quận 7, TPHCM"                   
                         );

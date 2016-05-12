@@ -51,7 +51,7 @@
                         <h5>{{$infors['cty']}}<br>Nhà phân phối Mercedes lớn nhất Việt Nam</h5>
                     </div>
                     <div class="col-dl-7 footer-avatar">
-                        <img src="{{ asset('home/images/avatar.png') }}" alt="avatar">
+                        <img height="120px" width="90px" src="{{ asset('home/images/avatar.jpg') }}" alt="avatar">
                         <h2 class="col-dl-6 supporth"><span>{{$infors['tuvan']}}</span><br>{{$infors['name']}}</h2>
                         <div class="col-dl-4 hotline">
                             <h2>{{$infors['mobile']}}</h2> Hỗ trợ 24/7
