@@ -74,7 +74,7 @@
 	                </div>
 	            </div>
 	            <div class="clearfix"></div>
-	            <iframe src="https://www.google.com/maps/d/embed?mid=1ZtYl0XBXG5dA1bUuvecDWaCtWwI" width="100%" height="300"></iframe>
+	            <iframe src="https://www.google.com/maps/d/embed?mid=1_JCBecR1PipHFYhk6X546TCpiNA" width="100%" height="360"></iframe>
 
 	        </div>
 	        <script type="text/javascript">
