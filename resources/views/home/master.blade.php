@@ -93,19 +93,22 @@
         @include('home.footer')
     <!-- End footer -->
     <!-- Go top -->
-    <div id="goTop" style="display: block;"><img src="{{ asset('home/images/icon-back.png') }}" alt="Len dau trang"></div>
-    <script type="text/javascript">
-        $(function(){
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) $('#goTop').fadeIn();
-                    else $('#goTop').fadeOut();
-                });
-                $('#goTop').click(function () {
-                $('body,html').animate({ scrollTop: 0 }, 'slow');
-            });
+    <div id="goTop" style="display: block;">
+        <!-- <img src="{{ asset('home/images/icon-back.png') }}" alt="Len dau trang"> -->
+        <img src="{{ asset('home/images/hotline-mercedes.png') }}">
+    </div>
+     <script type="text/javascript">
+    //     $(function(){
+    //         $(window).scroll(function () {
+    //             if ($(this).scrollTop() > 100) $('#goTop').fadeIn();
+    //                 else $('#goTop').fadeOut();
+    //             });
+    //             $('#goTop').click(function () {
+    //             $('body,html').animate({ scrollTop: 0 }, 'slow');
+    //         });
 
-        });
-    </script>
+    //     });
+    // </script>
     <!-- End go top -->
 </body>
 </html>

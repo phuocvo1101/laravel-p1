@@ -85,7 +85,7 @@ ul.mainmenu > li > ul > li > a:hover{text-decoration:underline;}
 .footer .supporth{float:left;margin-bottom:15px;}
 .footer .hotline{float:left;background:url(../images/icon-phone1.png) no-repeat left top;color:#0069cc;margin-bottom:15px;}
 .footer .hotline a{color:#0069cc;}
-#goTop{bottom: 30px;cursor: pointer;display: none;z-index: 999999999;height: 32px;position: fixed;right: 15px;width: 32px;opacity:0.8;}
+#goTop{bottom: 10px;cursor: pointer;display: none;z-index: 999999999;height: 40px;position: fixed;right: 0px;width: 240px;opacity:0.8;}
 #goTop1{bottom: 20px;cursor: pointer;display: block;z-index: 999999999;height: 32px;position: fixed;right: 30px;width: 260px;opacity:0.8;}
 #goTop:hover{opacity:1;}
 .social{padding:10px 0;border-top:1px dashed #cfcfcf;font-size:13px;font-weight:bold;}.social img{margin-bottom:15px;}
