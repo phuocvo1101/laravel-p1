@@ -19,8 +19,8 @@ class HomeController extends Controller
     {
        // $this->middleware('auth');
         $infors = array(
-                        'name' => "" ,
-                        'tuvan' => "Tư vấn bán hàng" ,
+                        'name' => "Cao Nguyễn Minh Huy" ,
+                        'tuvan' => "Cố vấn bán hàng" ,
                         'mobile' => "0934 0911 93",
                         'cty' => "Công ty Vietnam star",
                         'email' => "huycao.mercedesvietnam@gmail.com",
@@ -41,8 +41,8 @@ class HomeController extends Controller
     public function index()
     {
         $variable1="I am Data";
-        $new_product = DB::table('products')->select('id','name','price','image','order')->where('new_product', 1)->orderBy('order', 'asc')->skip(0)->take(9)->get();
-        $old_product = DB::table('products')->select('id','name','price','image','order')->where('old_product', 1)->orderBy('order', 'asc')->skip(0)->take(6)->get();
+        $new_product = DB::table('products')->select('id','name','price','image','order')->where('new_product', 1)->orderBy('order', 'asc')->get();
+        $old_product = DB::table('products')->select('id','name','price','image','order')->where('old_product', 1)->orderBy('order', 'asc')->get();
         
         return view('home.index',compact('variable1','new_product','old_product'));
     }
