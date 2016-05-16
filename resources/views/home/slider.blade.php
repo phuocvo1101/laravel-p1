@@ -4,9 +4,9 @@
                 <div class="flexslider">
                     <div class="flex-viewport" style="overflow: hidden; position: relative;">
                         <ul class="slides" style="width: 1000%; transition-duration: 0s; transform: translate3d(-1170px, 0px, 0px);">
-                            <li class="clone" aria-hidden="true" style="width: 1170px; float: left; display: block;"><img src="{{ asset('home/images/slider/slider1.jpg')}}" alt="slide" draggable="false"></li>
-                            <li class="flex-active-slide.jpg" style="width: 1170px; float: left; display: block;"><img src="{{ asset('home/images/slider/slider2.jpg')}}" alt="slide" draggable="false"></li>
-                            <li style="width: 1170px; float: left; display: block;" class=""><img src="{{ asset('home/images/slider/slider3.jpg')}}" alt="slide" draggable="false"></li>
+                            <li class="clone" aria-hidden="true" style="width: 1170px; float: left; display: block;"><img src="{{ asset('home/images/slider/slider11.jpg')}}" alt="slide" draggable="false"></li>
+                            <li class="flex-active-slide.jpg" style="width: 1170px; float: left; display: block;"><img src="{{ asset('home/images/slider/slider21.jpg')}}" alt="slide" draggable="false"></li>
+                            <li style="width: 1170px; float: left; display: block;" class=""><img src="{{ asset('home/images/slider/slider31.jpg')}}" alt="slide" draggable="false"></li>
                             <!-- <li style="width: 1170px; float: left; display: block;" class=""><img src="{{ asset('home/images/slider/slider4.jpg')}}" alt="slide" draggable="false"></li>                             -->
                         </ul>
                     </div>
