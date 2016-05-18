@@ -1,8 +1,8 @@
-$(document).ready(function() {
-        $('#dataTables-example').DataTable({
-                responsive: true
-        });
-});
+// $(document).ready(function() {
+//         $('#dataTables-example').DataTable({
+//                 responsive: true
+//         });
+// });
 
 $("div.alert").delay(3000).slideUp();
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	$("a#del_img_detail").on('click', function (){
-		var url = "http://laravel.mercedes.local/admin/product/delimg/";
+		var url = "http://mercedesglc300.com/admin/product/delimg/";
 		var _token = $("form[name='frmEditProduct']").find("input[name='_token']").val();
 		var idHinh = $(this).parent().find("img").attr("idHinh");
 		var img = $(this).parent().find("img").attr("src");
