@@ -14,7 +14,7 @@
                             <br> Hotline dịch vụ: 0944 979797 (24/7)
                             <br> Email: {{$infors['email']}}
                             <br> Website bán hàng: <a href="http://toyotahcm.net.vn">http://toyotahcm.net.vn</a>
-                            <br><span style="font-size:8px;">LK: <a href="http://toyotahcm.net.vn">Toyota Vietnam</a>,&nbsp;<a href="http://toyotahcm.net.vn">Toyota C200</a> ,<a href="http://toyotahcm.net.vn">Toyota S400</a> ,<a href="http://toyotahcm.net.vn">Toyota S500</a> ,<a href="http://toyotahcm.net.vn">Toyota GLC</a></span></p>
+                            <br><span style="font-size:8px;">LK: <a href="http://toyotahcm.net.vn">TOYOTA HIROSHIMA TÂN CẢNG</a>,&nbsp;<a href="http://www.toyotahcm.net.vn/chi-tiet-san-pham/11">VIOS 1.5G</a> ,<a href="http://www.toyotahcm.net.vn/chi-tiet-san-pham/27">INNOVA E</a> ,<a href="http://www.toyotahcm.net.vn/chi-tiet-san-pham/30">FORTUNER TRD 2.7V 4X2</a> ,<a href="http://www.toyotahcm.net.vn/chi-tiet-san-pham/14">ALTIS 1.8G (MT)</a></span></p>
                     </div>
                     <h2 class="supporth"><span>{{$infors['tuvan']}}</span><br>{{$infors['name']}}</h2>
                     <div class="hotline">
