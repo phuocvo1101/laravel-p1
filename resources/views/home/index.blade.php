@@ -29,7 +29,6 @@
                         <!-- Product Xe khuyen mai-->
                         <div class="content">
                         @if($promotion_product)
-                        <?php// var_dump($promotion_product) ;?>
                             @foreach ($promotion_product as $item)
                             
                             <div class="product">
