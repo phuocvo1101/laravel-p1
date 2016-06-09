@@ -29,13 +29,15 @@
                         <!-- Product Xe khuyen mai-->
                         <div class="content">
                         @if($promotion_product)
+                        <?php// var_dump($promotion_product) ;?>
                             @foreach ($promotion_product as $item)
+                            
                             <div class="product">
                                 <div class="products">
                                     <div class="product_img">
-                                        <a href="{!! URL::route('detailProduct', $item->id) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="E200 Edition E"></a>
+                                        <a href="{!! URL::route('detailProduct', $item->id.'-'.$item->alias) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="E200 Edition E"></a>
                                     </div>
-                                    <h4><a href="{!! URL::route('detailProduct', $item->id) !!}">{!! $item->name !!}</a></h4>
+                                    <h4><a href="{!! URL::route('detailProduct', $item->id.'-'.$item->alias) !!}">{!! $item->name !!}</a></h4>
                                     <div class="product_price"><span class="spleft"></span><span class="spcenter">{!! number_format($item->price,0,',','.') !!} VNĐ</span><span class="spleft spright"></span></div>
                                 </div>
                             </div>
@@ -54,9 +56,9 @@
                             <div class="product">
                                 <div class="products">
                                     <div class="product_img">
-                                        <a href="{!! URL::route('detailProduct', $item->id) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="GLE400 4Matic"></a>
+                                        <a href="{!! URL::route('detailProduct', $item->id.'-'.$item->alias) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="GLE400 4Matic"></a>
                                     </div>
-                                    <h4><a href="{!! URL::route('detailProduct', $item->id) !!}">{!! $item->name !!}</a></h4>
+                                    <h4><a href="{!! URL::route('detailProduct', $item->id.'-'.$item->alias) !!}">{!! $item->name !!}</a></h4>
                                     <div class="product_price"><span class="spleft"></span><span class="spcenter">{!! number_format($item->price,0,',','.') !!} VNĐ</span><span class="spleft spright"></span></div>
                                 </div>
                             </div>
@@ -74,9 +76,9 @@
                             <div class="product">
                                 <div class="products">
                                     <div class="product_img">
-                                        <a href="{!! URL::route('detailProduct', $item->id) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="E400 AMG 2013"></a>
+                                        <a href="{!! URL::route('detailProduct', $item->id.'-'.$item->alias) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="E400 AMG 2013"></a>
                                     </div>
-                                    <h4><a href="{!! URL::route('detailProduct', $item->id) !!}">{!! $item->name !!}</a></h4>
+                                    <h4><a href="{!! URL::route('detailProduct', $item->id.'-'.$item->alias) !!}">{!! $item->name !!}</a></h4>
                                     <div class="product_price"><span class="spleft"></span><span class="spcenter">{!! number_format($item->price,0,',','.') !!} VNĐ</span><span class="spleft spright"></span></div>
                                 </div>
                             </div>

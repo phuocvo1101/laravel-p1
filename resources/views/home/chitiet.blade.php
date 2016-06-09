@@ -75,9 +75,9 @@
                                 <div class="products">
 
                                     <div class="product_img">
-                                        <a href="{!! URL::route('detailProduct', $item->id) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="E200"></a>
+                                        <a href="{!! URL::route('detailProduct', $item->id.'-'.$item->alias) !!}"><img src="{{ asset('upload/'.$item->image) }}" alt="E200"></a>
                                     </div>
-                                    <h4><a href="{!! URL::route('detailProduct', $item->id) !!}">{{ $item->name }}</a></h4>
+                                    <h4><a href="{!! URL::route('detailProduct', $item->id.'-'.$item->alias) !!}">{{ $item->name }}</a></h4>
                                     <div class="product_price"><span class="spleft"></span><span class="spcenter">{!! number_format($item->price,0,',','.') !!} VNĐ</span><span class="spleft spright"></span></div>
 
                                 </div>

@@ -10,7 +10,7 @@
                                     <ul class="left-menu def2">
                                         <?php $product = DB::table('products')->select('id','name','alias')->where('cate_id', $item1->id)->get(); ?>
                                         @foreach ($product as $item2)
-                                        <li><a href="{!! URL::route('detailProduct', $item2->id) !!}">{{ $item2->name}}</a></li>
+                                        <li><a href="{!! URL::route('detailProduct', $item2->id.'-'.$item2->alias) !!}">{{ $item2->name}}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>
@@ -50,7 +50,7 @@
                                 <ul>
                                     <?php $product = DB::table('products')->select('id','name','alias')->where('cate_id', $item1->id)->get(); ?>
                                     @foreach ($product as $item2)
-                                    <li><a href="{!! URL::route('detailProduct', $item2->id) !!}">{{ $item2->name}}</a></li>
+                                    <li><a href="{!! URL::route('detailProduct', $item2->id.'-'.$item2->alias) !!}">{{ $item2->name}}</a></li>
                                     @endforeach
                                 </ul>
                             </li>

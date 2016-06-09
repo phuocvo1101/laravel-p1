@@ -44,25 +44,25 @@ class HomeController extends Controller
         $variable1="I am Data";
         $promotion_product =array();
         $vios_product = DB::table('products')
-            ->select('id','name','price','image')
+            ->select('id','name','price','image','alias')
             ->where('promotion_product', 1)
             ->where('cate_id', 4)
             ->orderBy('id', 'desc')->skip(0)->take(3)->get();
 
         $inova_product = DB::table('products')
-            ->select('id','name','price','image')
+            ->select('id','name','price','image','alias')
             ->where('promotion_product', 1)
             ->where('cate_id', 7)
             ->orderBy('id', 'desc')->skip(0)->take(3)->get();
        
         $fortuner_product = DB::table('products')
-            ->select('id','name','price','image')
+            ->select('id','name','price','image','alias')
             ->where('promotion_product', 1)
             ->where('cate_id', 5)
             ->orderBy('id', 'desc')->skip(0)->take(3)->get();
 
         $altis_product = DB::table('products')
-            ->select('id','name','price','image')
+            ->select('id','name','price','image','alias')
             ->where('promotion_product', 1)
             ->where('cate_id', 8)
             ->orderBy('id', 'desc')->skip(0)->take(3)->get();
@@ -92,7 +92,7 @@ class HomeController extends Controller
 
         $soluong = count($promotion_product);
         $diff_product = DB::table('products')
-        ->select('id','name','price','image')
+        ->select('id','name','price','image','alias')
         ->where('promotion_product', 1)
         ->whereNotIn('cate_id', [4,7,5,8])
         ->orderBy('id', 'desc')->skip(0)->take(15 - $soluong)->get();
@@ -101,16 +101,18 @@ class HomeController extends Controller
                 $promotion_product[] = $value;
             }
         }
-        $import_product = DB::table('products')->select('id','name','price','image')->where('import_product', 1)->orderBy('id', 'desc')->skip(0)->take(9)->get();
-        $old_product = DB::table('products')->select('id','name','price','image')->where('old_product', 1)->orderBy('id', 'desc')->skip(0)->take(6)->get();
+        $import_product = DB::table('products')->select('id','name','price','image','alias')->where('import_product', 1)->orderBy('id', 'desc')->skip(0)->take(9)->get();
+        $old_product = DB::table('products')->select('id','name','price','image','alias')->where('old_product', 1)->orderBy('id', 'desc')->skip(0)->take(6)->get();
         
         return view('home.index',compact('variable1','promotion_product','import_product','old_product'));
     }
 
     public function detailProduct ($id)
     {
+        $str_id = explode('-', $id);
+        $id = $str_id[0];
         $product = DB::table('products')->select('*')->where('id', $id)->first();
-        $relatedProducts = DB::table('products')->select('id','name','price','image')->where('cate_id',$product->cate_id)->where('id','<>',$product->id)->orderBy('id', 'desc')->skip(0)->take(3)->get();
+        $relatedProducts = DB::table('products')->select('id','name','price','image','alias')->where('cate_id',$product->cate_id)->where('id','<>',$product->id)->orderBy('id', 'desc')->skip(0)->take(3)->get();
         $img_detail = DB::table('product_images')->select('id','image')->where('product_id',$id)->orderBy('id', 'desc')->skip(0)->take(3)->get();
         return view('home.chitiet',compact('product','relatedProducts','img_detail'));
     }
@@ -119,35 +121,35 @@ class HomeController extends Controller
     {
         $cate = DB::table('cates')->select('id','name')->where('id', $id)->first();
         $loai = $cate->name;
-        $cate_products = DB::table('products')->select('id','name','price','image')->where('cate_id', $id)->orderBy('id', 'desc')->paginate($this->pag);
+        $cate_products = DB::table('products')->select('id','name','price','image','alias')->where('cate_id', $id)->orderBy('id', 'desc')->paginate($this->pag);
         return view('home.sanpham',compact('loai','cate_products'));
     }
 
     public function newProduct ()
     {
         $loai = 'xe mới';
-        $cate_products = DB::table('products')->select('id','name','price','image')->where('new_product', 1)->orderBy('id', 'desc')->paginate($this->pag);
+        $cate_products = DB::table('products')->select('id','name','price','image','alias')->where('new_product', 1)->orderBy('id', 'desc')->paginate($this->pag);
         return view('home.sanpham',compact('loai','cate_products'));
     }
 
     public function oldProduct ()
     {
         $loai = 'xe đã qua sử dụng';
-        $cate_products = DB::table('products')->select('id','name','price','image')->where('old_product', 1)->orderBy('id', 'desc')->paginate($this->pag);
+        $cate_products = DB::table('products')->select('id','name','price','image','alias')->where('old_product', 1)->orderBy('id', 'desc')->paginate($this->pag);
         return view('home.sanpham',compact('loai','cate_products'));
     }
 
     public function tintuc ()
     {
         $loai = 'Tin tức';
-        $news = DB::table('news')->select('id','name','alias','image')->where('cate_news_id', 1)->orderBy('id', 'desc')->paginate($this->pag);
+        $news = DB::table('news')->select('id','name','alias','image','alias')->where('cate_news_id', 1)->orderBy('id', 'desc')->paginate($this->pag);
         return view('home.tintuc',compact('loai','news'));
     }
 
     public function khuyenmai ()
     {
         $loai = 'Khuyến Mãi';
-        $news = DB::table('news')->select('id','name','alias','image')->where('cate_news_id', 2)->orderBy('id', 'desc')->paginate($this->pag);
+        $news = DB::table('news')->select('id','name','alias','image','alias')->where('cate_news_id', 2)->orderBy('id', 'desc')->paginate($this->pag);
         return view('home.tintuc',compact('loai','news'));
     }
 
