@@ -40,6 +40,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // commit
         $variable1="I am Data";
         $promotion_product =array();
         $vios_product = DB::table('products')
