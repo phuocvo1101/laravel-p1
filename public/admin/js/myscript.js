@@ -22,7 +22,8 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	$("a#del_img_detail").on('click', function (){
-		var url = "http://laravel.moto.local/admin/product/delimg/";
+		var baseurl = $(this).attr("baseurl");
+		var url = baseurl+"/admin/product/delimg/";
 		var _token = $("form[name='frmEditProduct']").find("input[name='_token']").val();
 		var idHinh = $(this).parent().find("img").attr("idHinh");
 		var img = $(this).parent().find("img").attr("src");

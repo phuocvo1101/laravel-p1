@@ -84,7 +84,7 @@
    @foreach ($image_detail as $key=>$item)
     <div class="form-group" id={{ $key }}>
         <img class="imgDetail" src="{{ asset('upload/detail/'.$item['image']) }}" idHinh="{{$item['id']}}" id="{{ $key }}" /> 
-        <a href="javascript:void(0)" type="button" id="del_img_detail" class="btn btn-danger btn-circle icon_del"><i class="fa fa-times"></i></a>     
+        <a href="javascript:void(0)" type="button" baseurl="{!! url('/') !!}" id="del_img_detail" class="btn btn-danger btn-circle icon_del"><i class="fa fa-times"></i></a>     
     </div>
     @endforeach
     <button type="button" class="btn btn-primary" id="addImages">Add Images Detail</button>
